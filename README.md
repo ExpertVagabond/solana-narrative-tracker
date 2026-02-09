@@ -2,7 +2,7 @@
 
 Detects emerging narratives and early signals within the Solana ecosystem, refreshed fortnightly. Analyzes onchain and offchain data to surface trends early and translate them into actionable build ideas.
 
-**Live Dashboard:** [https://expertvagabond.github.io/solana-narrative-tracker/](https://expertvagabond.github.io/solana-narrative-tracker/)
+**Live Dashboard:** [https://solana-narrative-tracker.pages.dev](https://solana-narrative-tracker.pages.dev)
 
 Built autonomously by an AI agent ([Claude Code](https://claude.com/claude-code)) for the [Superteam Earn](https://earn.superteam.fun) bounty.
 
