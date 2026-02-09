@@ -3,69 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solana Narrative Tracker</title>
+    <title>Solana Narrative Tracker — Emerging Signals & Build Ideas</title>
+    <meta name="description" content="AI-powered detection of emerging narratives in the Solana ecosystem. Analyzes onchain, developer, market, and social signals fortnightly.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%239945FF' stroke-width='2.5'/><path d='M10 20l4-8 4 5 4-9' stroke='%2314F195' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
 </head>
 <body>
     <div class="bg-grid"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
     <header>
         <div class="header-content">
             <div class="logo-group">
                 <div class="logo-mark">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <circle cx="16" cy="16" r="14" stroke="url(#grad)" stroke-width="2.5"/>
-                        <path d="M10 20l4-8 4 5 4-9" stroke="url(#grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs><linearGradient id="grad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs>
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                        <circle cx="18" cy="18" r="16" stroke="url(#hgrad)" stroke-width="2"/>
+                        <path d="M11 23l5-10 4 6 5-11" stroke="url(#hgrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs><linearGradient id="hgrad" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs>
                     </svg>
                 </div>
                 <div>
                     <h1>Solana Narrative Tracker</h1>
-                    <p class="subtitle">Emerging narratives &amp; build ideas — refreshed fortnightly</p>
+                    <p class="subtitle">Emerging signals & build ideas — refreshed fortnightly</p>
                 </div>
             </div>
             <div class="header-meta">
-                <span class="badge" id="last-updated">Loading...</span>
+                <span class="badge pulse" id="last-updated">Loading...</span>
                 <span class="badge badge-outline" id="signal-count"></span>
+                <a href="https://github.com/ExpertVagabond/solana-narrative-tracker" target="_blank" class="badge badge-outline badge-link">View Source</a>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Hero Metrics -->
+        <section class="hero-metrics">
+            <div class="metric-card metric-sol">
+                <div class="metric-top">
+                    <span class="metric-label">SOL</span>
+                    <span class="metric-change" id="sol-change">—</span>
+                </div>
+                <span class="metric-value" id="sol-price">—</span>
+                <div class="metric-sub" id="sol-sub"></div>
+            </div>
+            <div class="metric-card metric-tvl">
+                <div class="metric-top">
+                    <span class="metric-label">Total Value Locked</span>
+                    <span class="metric-change" id="tvl-change">—</span>
+                </div>
+                <span class="metric-value" id="sol-tvl">—</span>
+                <div class="sparkline-container" id="tvl-sparkline"></div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-top">
+                    <span class="metric-label">Network TPS</span>
+                </div>
+                <span class="metric-value" id="net-tps">—</span>
+                <div class="metric-sub">avg recent samples</div>
+            </div>
+            <div class="metric-card metric-narratives">
+                <div class="metric-top">
+                    <span class="metric-label">Narratives Detected</span>
+                </div>
+                <span class="metric-value gradient-text" id="narrative-count">—</span>
+                <div class="metric-sub" id="period-label"></div>
+            </div>
+        </section>
+
         <!-- Executive Summary -->
-        <section class="summary-section" id="summary-section">
+        <section class="summary-section">
             <div class="summary-card">
-                <h2>Executive Summary</h2>
+                <div class="summary-header">
+                    <h2>Executive Summary</h2>
+                    <span class="badge badge-outline" id="analysis-agent"></span>
+                </div>
                 <p id="executive-summary">Analyzing signals...</p>
             </div>
         </section>
 
-        <!-- Market Overview -->
-        <section class="metrics-bar" id="metrics-bar">
-            <div class="metric">
-                <span class="metric-label">SOL Price</span>
-                <span class="metric-value" id="sol-price">—</span>
-                <span class="metric-change" id="sol-change">—</span>
-            </div>
-            <div class="metric">
-                <span class="metric-label">Solana TVL</span>
-                <span class="metric-value" id="sol-tvl">—</span>
-                <span class="metric-change" id="tvl-change">—</span>
-            </div>
-            <div class="metric">
-                <span class="metric-label">Network TPS</span>
-                <span class="metric-value" id="net-tps">—</span>
-            </div>
-            <div class="metric">
-                <span class="metric-label">Narratives</span>
-                <span class="metric-value" id="narrative-count">—</span>
-            </div>
-        </section>
-
-        <!-- Narratives -->
+        <!-- Category Filters -->
         <section class="narratives-section">
-            <h2 class="section-title">Detected Narratives</h2>
+            <div class="section-header">
+                <h2 class="section-title">Detected Narratives</h2>
+                <div class="filter-chips" id="filter-chips">
+                    <button class="chip active" data-filter="all">All</button>
+                </div>
+            </div>
             <div class="narratives-grid" id="narratives-grid">
                 <div class="loading-state">
                     <div class="spinner"></div>
@@ -74,13 +100,13 @@
             </div>
         </section>
 
-        <!-- Signals Grid -->
+        <!-- Supporting Signals -->
         <section class="signals-section">
             <h2 class="section-title">Supporting Signals</h2>
             <div class="signals-tabs">
                 <button class="tab active" data-tab="movers">Top Movers</button>
                 <button class="tab" data-tab="repos">Dev Activity</button>
-                <button class="tab" data-tab="news">News &amp; Social</button>
+                <button class="tab" data-tab="news">News & Social</button>
             </div>
             <div class="signals-content">
                 <div class="tab-panel active" id="panel-movers"></div>
@@ -89,29 +115,38 @@
             </div>
         </section>
 
+        <!-- Data Sources -->
+        <section class="sources-section">
+            <h2 class="section-title">Data Sources</h2>
+            <div class="source-grid" id="source-grid"></div>
+        </section>
+
         <!-- Methodology -->
         <section class="methodology-section">
-            <h2 class="section-title">Methodology</h2>
-            <div class="method-grid">
-                <div class="method-card">
-                    <div class="method-icon">&#x26d3;</div>
-                    <h3>Onchain</h3>
-                    <p>TVL flows, protocol growth, yield shifts, stablecoin movements, and network performance via DeFiLlama and Solana RPC.</p>
+            <h2 class="section-title">How It Works</h2>
+            <div class="pipeline">
+                <div class="pipeline-step">
+                    <div class="step-number">1</div>
+                    <h3>Collect</h3>
+                    <p>Pull signals from 8+ data sources across onchain, developer, market, and social dimensions every two weeks.</p>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon">&#x2318;</div>
-                    <h3>Developer</h3>
-                    <p>New repo creation, star velocity, commit activity, and topic trends across the Solana GitHub ecosystem.</p>
+                <div class="pipeline-arrow">&#x2192;</div>
+                <div class="pipeline-step">
+                    <div class="step-number">2</div>
+                    <h3>Correlate</h3>
+                    <p>Cross-reference signals across all dimensions. A narrative supported by onchain + developer + social data ranks higher than single-source signals.</p>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon">&#x25ce;</div>
-                    <h3>Market</h3>
-                    <p>Token price movements, category rotation, trending assets, and volume analysis via CoinGecko.</p>
+                <div class="pipeline-arrow">&#x2192;</div>
+                <div class="pipeline-step">
+                    <div class="step-number">3</div>
+                    <h3>Synthesize</h3>
+                    <p>AI analysis identifies 5-8 emerging narratives, scores signal strength 1-10, and generates concrete build ideas tied to each trend.</p>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon">&#x2709;</div>
-                    <h3>Social</h3>
-                    <p>Ecosystem blog posts, governance proposals (SIMDs), crypto news coverage, and community discourse.</p>
+                <div class="pipeline-arrow">&#x2192;</div>
+                <div class="pipeline-step">
+                    <div class="step-number">4</div>
+                    <h3>Publish</h3>
+                    <p>Results deployed to this dashboard automatically via GitHub Actions. Fully open-source pipeline — fork and customize.</p>
                 </div>
             </div>
         </section>
@@ -119,11 +154,17 @@
 
     <footer>
         <div class="footer-content">
-            <p>Built autonomously by an AI agent (Claude Code) for the <a href="https://earn.superteam.fun" target="_blank">Superteam Earn</a> bounty.</p>
+            <div class="footer-brand">
+                <svg width="20" height="20" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="16" stroke="url(#fgrad)" stroke-width="2"/><path d="M11 23l5-10 4 6 5-11" stroke="url(#fgrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="fgrad" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs></svg>
+                <span>Solana Narrative Tracker</span>
+            </div>
+            <p>Built autonomously by an AI agent (<a href="https://claude.com/claude-code" target="_blank">Claude Code</a>) for the <a href="https://earn.superteam.fun" target="_blank">Superteam Earn</a> bounty.</p>
             <p class="footer-links">
                 <a href="https://github.com/ExpertVagabond/solana-narrative-tracker" target="_blank">GitHub</a>
                 &middot;
                 <span>Data refreshed fortnightly via GitHub Actions</span>
+                &middot;
+                <span>MIT License</span>
             </p>
         </div>
     </footer>
