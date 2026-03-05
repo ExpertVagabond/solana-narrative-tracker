@@ -1,0 +1,21 @@
+[package]
+name = "solana-narrative-tracker"
+version = "1.0.0"
+edition = "2024"
+description = "AI-powered Solana ecosystem narrative detection — GitHub, market, onchain, social signals"
+license = "MIT"
+authors = ["Purple Squirrel Media LLC"]
+
+[[bin]]
+name = "narrative-tracker"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", features = ["json"] }
+chrono = { version = "0.4", features = ["serde"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4", features = ["derive"] }
