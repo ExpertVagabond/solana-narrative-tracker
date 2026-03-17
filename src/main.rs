@@ -1,9 +1,12 @@
 use clap::Parser;
-use serde_json::{json, Value};
+use serde_json::{Value, json};
 use std::path::PathBuf;
 
 #[derive(Parser)]
-#[command(name = "narrative-tracker", about = "Solana ecosystem narrative detection")]
+#[command(
+    name = "narrative-tracker",
+    about = "Solana ecosystem narrative detection"
+)]
 struct Args {
     #[arg(long, default_value = "full")]
     mode: String,
@@ -22,7 +25,9 @@ async fn get_json(client: &reqwest::Client, url: &str) -> Value {
 
 async fn get_json_auth(client: &reqwest::Client, url: &str, token: Option<&str>) -> Value {
     let mut req = client.get(url);
-    if let Some(t) = token { req = req.header("Authorization", format!("Bearer {t}")); }
+    if let Some(t) = token {
+        req = req.header("Authorization", format!("Bearer {t}"));
+    }
     match req.send().await {
         Ok(r) if r.status().is_success() => r.json().await.unwrap_or(json!(null)),
         _ => json!(null),
@@ -37,28 +42,75 @@ async fn post_json(client: &reqwest::Client, url: &str, body: &Value) -> Value {
 }
 
 fn enc(s: &str) -> String {
-    s.bytes().map(|b| match b {
-        b'A'..=b'Z' | b'a'..=b'z' | b'0'..=b'9' | b'-' | b'_' | b'.' | b'~' => (b as char).to_string(),
-        _ => format!("%{:02X}", b),
-    }).collect()
+    s.bytes()
+        .map(|b| match b {
+            b'A'..=b'Z' | b'a'..=b'z' | b'0'..=b'9' | b'-' | b'_' | b'.' | b'~' => {
+                (b as char).to_string()
+            }
+            _ => format!("%{:02X}", b),
+        })
+        .collect()
 }
 
 async fn github_signals(client: &reqwest::Client, token: Option<&str>) -> Value {
-    let d30 = (chrono::Utc::now() - chrono::Duration::days(30)).format("%Y-%m-%d").to_string();
-    let d14 = (chrono::Utc::now() - chrono::Duration::days(14)).format("%Y-%m-%d").to_string();
+    let d30 = (chrono::Utc::now() - chrono::Duration::days(30))
+        .format("%Y-%m-%d")
+        .to_string();
+    let d14 = (chrono::Utc::now() - chrono::Duration::days(14))
+        .format("%Y-%m-%d")
+        .to_string();
 
-    let trending = get_json_auth(client, &format!(
-        "https://api.github.com/search/repositories?q={}&sort=stars&per_page=15", enc(&format!("solana created:>{d30}"))), token).await;
-    let active = get_json_auth(client, &format!(
-        "https://api.github.com/search/repositories?q={}&sort=updated&per_page=15", enc(&format!("solana pushed:>{d14}"))), token).await;
-    let top = get_json_auth(client, &format!(
-        "https://api.github.com/search/repositories?q={}&sort=stars&per_page=10", enc("solana stars:>500")), token).await;
+    let trending = get_json_auth(
+        client,
+        &format!(
+            "https://api.github.com/search/repositories?q={}&sort=stars&per_page=15",
+            enc(&format!("solana created:>{d30}"))
+        ),
+        token,
+    )
+    .await;
+    let active = get_json_auth(
+        client,
+        &format!(
+            "https://api.github.com/search/repositories?q={}&sort=updated&per_page=15",
+            enc(&format!("solana pushed:>{d14}"))
+        ),
+        token,
+    )
+    .await;
+    let top = get_json_auth(
+        client,
+        &format!(
+            "https://api.github.com/search/repositories?q={}&sort=stars&per_page=10",
+            enc("solana stars:>500")
+        ),
+        token,
+    )
+    .await;
 
-    let topics = ["defi","nft","ai-agents","depin","rwa","liquid-staking","payments","gaming","dao","privacy"];
+    let topics = [
+        "defi",
+        "nft",
+        "ai-agents",
+        "depin",
+        "rwa",
+        "liquid-staking",
+        "payments",
+        "gaming",
+        "dao",
+        "privacy",
+    ];
     let mut topic_data = json!({});
     for topic in topics {
-        let r = get_json_auth(client, &format!(
-            "https://api.github.com/search/repositories?q={}&sort=stars&per_page=5", enc(&format!("solana topic:{topic}"))), token).await;
+        let r = get_json_auth(
+            client,
+            &format!(
+                "https://api.github.com/search/repositories?q={}&sort=stars&per_page=5",
+                enc(&format!("solana topic:{topic}"))
+            ),
+            token,
+        )
+        .await;
         topic_data[topic] = json!({"total": r["total_count"], "repos": r["items"]});
     }
 
@@ -84,15 +136,27 @@ async fn onchain_signals(client: &reqwest::Client) -> Value {
     let tvl = get_json(client, "https://api.llama.fi/v2/historicalChainTvl/Solana").await;
     let protocols = get_json(client, "https://api.llama.fi/protocols").await;
 
-    let sol_protocol_count = protocols.as_array().map(|a|
-        a.iter().filter(|p| {
-            p["chains"].as_array().map(|c| c.iter().any(|ch| ch.as_str() == Some("Solana"))).unwrap_or(false)
-            && p["tvl"].as_f64().unwrap_or(0.0) > 1_000_000.0
-        }).count()
-    ).unwrap_or(0);
+    let sol_protocol_count = protocols
+        .as_array()
+        .map(|a| {
+            a.iter()
+                .filter(|p| {
+                    p["chains"]
+                        .as_array()
+                        .map(|c| c.iter().any(|ch| ch.as_str() == Some("Solana")))
+                        .unwrap_or(false)
+                        && p["tvl"].as_f64().unwrap_or(0.0) > 1_000_000.0
+                })
+                .count()
+        })
+        .unwrap_or(0);
 
-    let tps = post_json(client, "https://api.mainnet-beta.solana.com",
-        &json!({"jsonrpc":"2.0","id":1,"method":"getRecentPerformanceSamples","params":[5]})).await;
+    let tps = post_json(
+        client,
+        "https://api.mainnet-beta.solana.com",
+        &json!({"jsonrpc":"2.0","id":1,"method":"getRecentPerformanceSamples","params":[5]}),
+    )
+    .await;
 
     json!({
         "tvl_history_30d": tvl.as_array().map(|a| a.len()).unwrap_or(0),
@@ -135,19 +199,25 @@ async fn analyze(client: &reqwest::Client, signals: &Value) -> Value {
     let prompt = format!(
         "Analyze these Solana ecosystem signals and identify the top 5-7 emerging narratives.\n\
         For each: id, title, signal_strength (1-10), category, summary, evidence[], build_ideas[], key_projects[], risk_factors[].\n\
-        Return valid JSON with a \"narratives\" array.\n\n{digest}");
+        Return valid JSON with a \"narratives\" array.\n\n{digest}"
+    );
     let body = json!({"model":"claude-sonnet-4-5-20250929","max_tokens":8000,"messages":[{"role":"user","content":prompt}]});
-    let resp = client.post("https://api.anthropic.com/v1/messages")
-        .header("x-api-key", &api_key).header("anthropic-version", "2023-06-01")
-        .json(&body).send().await;
+    let resp = client
+        .post("https://api.anthropic.com/v1/messages")
+        .header("x-api-key", &api_key)
+        .header("anthropic-version", "2023-06-01")
+        .json(&body)
+        .send()
+        .await;
     match resp {
         Ok(r) if r.status().is_success() => {
             let data: Value = r.json().await.unwrap_or(json!({}));
             let text = data["content"][0]["text"].as_str().unwrap_or("{}");
-            if let Some(start) = text.find('{') {
-                if let Some(end) = text.rfind('}') {
-                    if let Ok(parsed) = serde_json::from_str::<Value>(&text[start..=end]) { return parsed; }
-                }
+            if let Some(start) = text.find('{')
+                && let Some(end) = text.rfind('}')
+                && let Ok(parsed) = serde_json::from_str::<Value>(&text[start..=end])
+            {
+                return parsed;
             }
             json!({"narratives": [], "raw_response": text})
         }
@@ -161,7 +231,10 @@ async fn main() {
     let args = Args::parse();
     let _ = std::fs::create_dir_all(&args.output);
     let _ = std::fs::create_dir_all(&args.site);
-    let client = reqwest::Client::builder().user_agent("narrative-tracker/1.0").build().unwrap();
+    let client = reqwest::Client::builder()
+        .user_agent("narrative-tracker/1.0")
+        .build()
+        .unwrap();
     let github_token = std::env::var("GITHUB_TOKEN").ok();
     let gt = github_token.as_deref();
 
@@ -174,7 +247,10 @@ async fn main() {
         }
         "analyze-only" => {
             let sp = args.output.join("signals.json");
-            let signals: Value = serde_json::from_str(&std::fs::read_to_string(&sp).expect("signals.json not found")).unwrap();
+            let signals: Value = serde_json::from_str(
+                &std::fs::read_to_string(&sp).expect("signals.json not found"),
+            )
+            .unwrap();
             let analysis = analyze(&client, &signals).await;
             let p = args.output.join("analysis.json");
             std::fs::write(&p, serde_json::to_string_pretty(&analysis).unwrap()).unwrap();
@@ -183,10 +259,18 @@ async fn main() {
         _ => {
             tracing::info!("Phase 1: Collecting signals...");
             let signals = collect_all(&client, gt).await;
-            std::fs::write(args.output.join("signals.json"), serde_json::to_string_pretty(&signals).unwrap()).unwrap();
+            std::fs::write(
+                args.output.join("signals.json"),
+                serde_json::to_string_pretty(&signals).unwrap(),
+            )
+            .unwrap();
             tracing::info!("Phase 2: Analyzing...");
             let analysis = analyze(&client, &signals).await;
-            std::fs::write(args.output.join("analysis.json"), serde_json::to_string_pretty(&analysis).unwrap()).unwrap();
+            std::fs::write(
+                args.output.join("analysis.json"),
+                serde_json::to_string_pretty(&analysis).unwrap(),
+            )
+            .unwrap();
             tracing::info!("Phase 3: Generating site data...");
             let site_data = json!({
                 "generated_at": chrono::Utc::now().to_rfc3339(),
@@ -194,7 +278,11 @@ async fn main() {
                 "signals_summary": {"github_trending": signals["github"]["trending_new"], "sol_price": signals["market"]["sol_price"],
                     "tvl": signals["onchain"]["current_tvl"], "governance": signals["social"]["governance_proposals"]}
             });
-            std::fs::write(args.site.join("data.json"), serde_json::to_string_pretty(&site_data).unwrap()).unwrap();
+            std::fs::write(
+                args.site.join("data.json"),
+                serde_json::to_string_pretty(&site_data).unwrap(),
+            )
+            .unwrap();
             tracing::info!("Done");
         }
     }
