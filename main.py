@@ -89,38 +89,55 @@ def generate_site(analysis: dict, signals: dict) -> None:
     print(f"  Site data written to {SITE_DIR / 'data.json'}")
 
 
-def main():
+def main() -> int:
+    valid_modes = {"--full", "--collect-only", "--analyze-only", "--help"}
     mode = sys.argv[1] if len(sys.argv) > 1 else "--full"
 
-    if mode == "--collect-only":
-        collect_all()
-        return
+    if mode not in valid_modes:
+        print(f"ERROR: Unknown mode '{mode}'. Valid: {', '.join(sorted(valid_modes))}")
+        return 1
 
-    if mode == "--analyze-only":
-        signals_path = DATA_DIR / "signals.json"
-        if not signals_path.exists():
-            print("ERROR: No signals.json found. Run collection first.")
-            sys.exit(1)
-        with open(signals_path) as f:
-            signals = json.load(f)
+    if mode == "--help":
+        print(__doc__ or "Solana Narrative Tracker")
+        return 0
+
+    try:
+        if mode == "--collect-only":
+            collect_all()
+            return 0
+
+        if mode == "--analyze-only":
+            signals_path = DATA_DIR / "signals.json"
+            if not signals_path.exists():
+                print("ERROR: No signals.json found. Run collection first.")
+                return 1
+            with open(signals_path) as f:
+                signals = json.load(f)
+            analysis = run_analysis(signals)
+            generate_site(analysis, signals)
+            return 0
+
+        # Full run
+        signals = collect_all()
         analysis = run_analysis(signals)
         generate_site(analysis, signals)
-        return
 
-    # Full run
-    signals = collect_all()
-    analysis = run_analysis(signals)
-    generate_site(analysis, signals)
-
-    print("\n" + "=" * 60)
-    narrative_count = len(analysis.get("narratives", []))
-    if narrative_count:
-        print(f"Done! {narrative_count} narratives detected.")
-    else:
-        print("Done! Raw signals collected (analysis requires ANTHROPIC_API_KEY).")
-    print(f"Dashboard data: {SITE_DIR / 'data.json'}")
-    print("=" * 60)
+        print("\n" + "=" * 60)
+        narrative_count = len(analysis.get("narratives", []))
+        if narrative_count:
+            print(f"Done! {narrative_count} narratives detected.")
+        else:
+            print("Done! Raw signals collected (analysis requires ANTHROPIC_API_KEY).")
+        print(f"Dashboard data: {SITE_DIR / 'data.json'}")
+        print("=" * 60)
+        return 0
+    except KeyboardInterrupt:
+        print("\nInterrupted by user.")
+        return 130
+    except Exception as exc:
+        print(f"ERROR: {exc}")
+        return 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
