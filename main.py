@@ -13,17 +13,82 @@ Usage:
 from __future__ import annotations
 
 import json
+import logging
+import re
 import sys
 import os
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
-from collectors import onchain, github_signals, market, social
-from analyzer import analyze, build_signal_digest
+logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Input validation helpers (defined before any handler)
+# ---------------------------------------------------------------------------
+
+_VALID_MODES = {"--full", "--collect-only", "--analyze-only", "--help"}
+_MAX_SIGNALS_SIZE = 50 * 1024 * 1024  # 50MB max signals file
+_MAX_PATH_LEN = 500
+_SAFE_PATH_RE = re.compile(r"^[a-zA-Z0-9_./-]+$")
+
+
+def validate_mode(mode: str) -> str:
+    """Validate CLI mode argument."""
+    if mode not in _VALID_MODES:
+        raise ValueError(f"Unknown mode '{mode}'. Valid: {', '.join(sorted(_VALID_MODES))}")
+    return mode
+
+
+def validate_path(path: Path) -> Path:
+    """Ensure path is reasonable and not a traversal attempt."""
+    s = str(path)
+    if len(s) > _MAX_PATH_LEN:
+        raise ValueError("Path too long")
+    if ".." in s:
+        raise ValueError("Path traversal not allowed")
+    return path
+
+
+def validate_signals(signals: Any) -> dict:
+    """Validate signals data structure."""
+    if not isinstance(signals, dict):
+        raise ValueError("Signals must be a dictionary")
+    required = {"onchain", "github", "market", "social"}
+    missing = required - set(signals.keys())
+    if missing:
+        logger.warning("Signals missing keys: %s", missing)
+    return signals
+
+
+def validate_json_file(path: Path, max_size: int = _MAX_SIGNALS_SIZE) -> dict:
+    """Safely load and validate a JSON file."""
+    if not path.exists():
+        raise FileNotFoundError(f"File not found: {path}")
+    if path.stat().st_size > max_size:
+        raise ValueError(f"File too large: {path.stat().st_size} bytes (max {max_size})")
+    with open(path) as f:
+        data = json.load(f)
+    return validate_signals(data)
+
+
+def sanitize_string(value: str, max_length: int = 1000) -> str:
+    """Strip dangerous characters and enforce length."""
+    if not isinstance(value, str):
+        return ""
+    return value.replace("<", "&lt;").replace(">", "&gt;").strip()[:max_length]
+
+
+# ---------------------------------------------------------------------------
+# Project paths
+# ---------------------------------------------------------------------------
+
+from collectors import onchain, github_signals, market, social  # noqa: E402
+from analyzer import analyze, build_signal_digest  # noqa: E402
 
 PROJECT_ROOT = Path(__file__).parent
-SITE_DIR = PROJECT_ROOT / "site"
-DATA_DIR = PROJECT_ROOT / "data"
+SITE_DIR = validate_path(PROJECT_ROOT / "site")
+DATA_DIR = validate_path(PROJECT_ROOT / "data")
 
 
 def collect_all() -> dict:
@@ -90,11 +155,12 @@ def generate_site(analysis: dict, signals: dict) -> None:
 
 
 def main() -> int:
-    valid_modes = {"--full", "--collect-only", "--analyze-only", "--help"}
     mode = sys.argv[1] if len(sys.argv) > 1 else "--full"
 
-    if mode not in valid_modes:
-        print(f"ERROR: Unknown mode '{mode}'. Valid: {', '.join(sorted(valid_modes))}")
+    try:
+        mode = validate_mode(mode)
+    except ValueError as exc:
+        print(f"ERROR: {exc}")
         return 1
 
     if mode == "--help":
@@ -108,11 +174,7 @@ def main() -> int:
 
         if mode == "--analyze-only":
             signals_path = DATA_DIR / "signals.json"
-            if not signals_path.exists():
-                print("ERROR: No signals.json found. Run collection first.")
-                return 1
-            with open(signals_path) as f:
-                signals = json.load(f)
+            signals = validate_json_file(signals_path)
             analysis = run_analysis(signals)
             generate_site(analysis, signals)
             return 0
@@ -134,8 +196,13 @@ def main() -> int:
     except KeyboardInterrupt:
         print("\nInterrupted by user.")
         return 130
-    except Exception as exc:
-        print(f"ERROR: {exc}")
+    except (FileNotFoundError, json.JSONDecodeError, ValueError) as exc:
+        logger.error("Fatal error: %s", type(exc).__name__)
+        print(f"ERROR: {type(exc).__name__}: check logs for details")
+        return 1
+    except OSError as exc:
+        logger.error("IO error: %s", type(exc).__name__)
+        print("ERROR: File system error")
         return 1
 
 

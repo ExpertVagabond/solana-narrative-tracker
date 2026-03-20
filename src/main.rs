@@ -2,6 +2,69 @@ use clap::Parser;
 use serde_json::{Value, json};
 use std::path::PathBuf;
 
+// ---------------------------------------------------------------------------
+// Input validation helpers (defined before any handler)
+// ---------------------------------------------------------------------------
+
+const VALID_MODES: &[&str] = &["full", "collect", "analyze"];
+const MAX_URL_LEN: usize = 2048;
+const MAX_TOKEN_LEN: usize = 256;
+const MAX_PATH_LEN: usize = 500;
+const MAX_RESPONSE_SIZE: usize = 50 * 1024 * 1024; // 50MB
+
+fn validate_mode(mode: &str) -> anyhow::Result<&str> {
+    anyhow::ensure!(
+        VALID_MODES.contains(&mode),
+        "Invalid mode '{}': must be one of {:?}",
+        mode,
+        VALID_MODES
+    );
+    Ok(mode)
+}
+
+fn validate_url(url: &str) -> anyhow::Result<()> {
+    anyhow::ensure!(!url.is_empty(), "URL must not be empty");
+    anyhow::ensure!(url.len() <= MAX_URL_LEN, "URL too long");
+    anyhow::ensure!(
+        url.starts_with("https://") || url.starts_with("http://"),
+        "URL must start with http:// or https://"
+    );
+    Ok(())
+}
+
+fn validate_token(token: &str) -> anyhow::Result<()> {
+    anyhow::ensure!(!token.is_empty(), "Token must not be empty");
+    anyhow::ensure!(token.len() <= MAX_TOKEN_LEN, "Token too long");
+    anyhow::ensure!(
+        token.chars().all(|c| c.is_ascii_graphic()),
+        "Token contains invalid characters"
+    );
+    Ok(())
+}
+
+fn validate_output_path(path: &PathBuf) -> anyhow::Result<()> {
+    let s = path.to_string_lossy();
+    anyhow::ensure!(s.len() <= MAX_PATH_LEN, "Output path too long");
+    anyhow::ensure!(
+        !s.contains(".."),
+        "Path traversal not allowed in output path"
+    );
+    Ok(())
+}
+
+fn sanitize_api_response(value: Value) -> Value {
+    // Ensure response is not excessively large
+    let serialized = serde_json::to_string(&value).unwrap_or_default();
+    if serialized.len() > MAX_RESPONSE_SIZE {
+        return json!({"error": "Response too large"});
+    }
+    value
+}
+
+// ---------------------------------------------------------------------------
+// CLI argument parsing
+// ---------------------------------------------------------------------------
+
 #[derive(Parser)]
 #[command(
     name = "narrative-tracker",
@@ -16,27 +79,48 @@ struct Args {
     site: PathBuf,
 }
 
+// ---------------------------------------------------------------------------
+// HTTP helpers with error handling
+// ---------------------------------------------------------------------------
+
 async fn get_json(client: &reqwest::Client, url: &str) -> Value {
+    if validate_url(url).is_err() {
+        return json!(null);
+    }
     match client.get(url).send().await {
-        Ok(r) if r.status().is_success() => r.json().await.unwrap_or(json!(null)),
+        Ok(r) if r.status().is_success() => {
+            sanitize_api_response(r.json().await.unwrap_or(json!(null)))
+        }
         _ => json!(null),
     }
 }
 
 async fn get_json_auth(client: &reqwest::Client, url: &str, token: Option<&str>) -> Value {
+    if validate_url(url).is_err() {
+        return json!(null);
+    }
     let mut req = client.get(url);
     if let Some(t) = token {
-        req = req.header("Authorization", format!("Bearer {t}"));
+        if validate_token(t).is_ok() {
+            req = req.header("Authorization", format!("Bearer {t}"));
+        }
     }
     match req.send().await {
-        Ok(r) if r.status().is_success() => r.json().await.unwrap_or(json!(null)),
+        Ok(r) if r.status().is_success() => {
+            sanitize_api_response(r.json().await.unwrap_or(json!(null)))
+        }
         _ => json!(null),
     }
 }
 
 async fn post_json(client: &reqwest::Client, url: &str, body: &Value) -> Value {
+    if validate_url(url).is_err() {
+        return json!(null);
+    }
     match client.post(url).json(body).send().await {
-        Ok(r) if r.status().is_success() => r.json().await.unwrap_or(json!(null)),
+        Ok(r) if r.status().is_success() => {
+            sanitize_api_response(r.json().await.unwrap_or(json!(null)))
+        }
         _ => json!(null),
     }
 }
