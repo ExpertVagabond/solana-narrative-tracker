@@ -145,36 +145,51 @@ def analyze_with_claude(signals: dict) -> dict:
         print("  [analyzer] anthropic package not installed, skipping API analysis")
         return {}
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
+    # Let the Anthropic client read ANTHROPIC_API_KEY from env automatically
+    # (avoids passing the key through variables)
+    if not os.environ.get("ANTHROPIC_API_KEY"):
         print("  [analyzer] ANTHROPIC_API_KEY not set, skipping API analysis")
         return {}
 
     digest = build_signal_digest(signals)
-    client = anthropic.Anthropic(api_key=api_key)
-    print("  [analyzer] Sending signals to Claude for analysis...")
 
-    response = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=8000,
-        system=SYSTEM_PROMPT,
-        messages=[
-            {
-                "role": "user",
-                "content": f"Analyze these Solana ecosystem signals from the past fortnight and identify emerging narratives. Today's date is {datetime.now(timezone.utc).strftime('%Y-%m-%d')}.\n\n{digest}",
-            }
-        ],
-    )
+    try:
+        client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
+        print("  [analyzer] Sending signals to Claude for analysis...")
 
-    text = response.content[0].text
+        response = client.messages.create(
+            model="claude-sonnet-4-5-20250929",
+            max_tokens=8000,
+            system=SYSTEM_PROMPT,
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"Analyze these Solana ecosystem signals from the past fortnight and identify emerging narratives. Today's date is {datetime.now(timezone.utc).strftime('%Y-%m-%d')}.\n\n{digest}",
+                }
+            ],
+        )
+
+        if not response.content:
+            print("  [analyzer] Empty response from Claude API")
+            return {}
+
+        text = response.content[0].text
+    except Exception as exc:
+        print(f"  [analyzer] Claude API call failed: {exc}")
+        return {}
+
     # Extract JSON from response
     try:
         if "```json" in text:
             text = text.split("```json")[1].split("```")[0]
         elif "```" in text:
             text = text.split("```")[1].split("```")[0]
-        return json.loads(text)
-    except json.JSONDecodeError:
+        result = json.loads(text)
+        if not isinstance(result, dict):
+            print("  [analyzer] Claude response is not a JSON object")
+            return {"raw_response": text}
+        return result
+    except (json.JSONDecodeError, IndexError):
         print("  [analyzer] Failed to parse Claude response as JSON")
         return {"raw_response": text}
 

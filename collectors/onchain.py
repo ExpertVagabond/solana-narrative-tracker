@@ -22,19 +22,19 @@ def _get(url: str, params: dict | None = None) -> dict | list | None:
 def get_solana_tvl_history() -> dict:
     """Get Solana chain TVL over last 30 days."""
     data = _get(f"{DEFILLAMA_BASE}/v2/historicalChainTvl/Solana")
-    if not data:
+    if not data or not isinstance(data, list) or len(data) == 0:
         return {"error": "Failed to fetch TVL"}
     recent = data[-30:]
-    current = recent[-1]["tvl"]
-    tvl_14d = recent[-14]["tvl"] if len(recent) >= 14 else recent[0]["tvl"]
-    tvl_30d = recent[0]["tvl"]
+    current = recent[-1].get("tvl", 0)
+    tvl_14d = recent[-14].get("tvl", 0) if len(recent) >= 14 else recent[0].get("tvl", 0)
+    tvl_30d = recent[0].get("tvl", 0)
     return {
         "current_tvl": current,
         "tvl_14d_ago": tvl_14d,
         "tvl_30d_ago": tvl_30d,
-        "change_14d_pct": round(((current - tvl_14d) / tvl_14d) * 100, 2),
-        "change_30d_pct": round(((current - tvl_30d) / tvl_30d) * 100, 2),
-        "data_points": [{"date": d["date"], "tvl": d["tvl"]} for d in recent],
+        "change_14d_pct": round(((current - tvl_14d) / tvl_14d) * 100, 2) if tvl_14d else 0,
+        "change_30d_pct": round(((current - tvl_30d) / tvl_30d) * 100, 2) if tvl_30d else 0,
+        "data_points": [{"date": d.get("date"), "tvl": d.get("tvl", 0)} for d in recent],
     }
 
 
