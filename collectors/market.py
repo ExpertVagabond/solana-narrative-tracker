@@ -13,8 +13,8 @@ def _get(url: str, params: dict | None = None) -> dict | list | None:
         resp = httpx.get(url, params=params, timeout=TIMEOUT)
         resp.raise_for_status()
         return resp.json()
-    except Exception as e:
-        print(f"  [market] Failed to fetch {url}: {e}")
+    except Exception:
+        print(f"  [market] Failed to fetch {url.split('?')[0]}")
         return None
 
 

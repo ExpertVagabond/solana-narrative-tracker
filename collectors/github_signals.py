@@ -43,8 +43,8 @@ def _search_repos(query: str, sort: str = "stars", limit: int = 15) -> list[dict
             }
             for r in items
         ]
-    except Exception as e:
-        print(f"  [github] Search failed for '{query}': {e}")
+    except Exception:
+        print(f"  [github] Search failed for '{query}'")
         return []
 
 

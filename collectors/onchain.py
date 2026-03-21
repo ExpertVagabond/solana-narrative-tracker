@@ -1,11 +1,12 @@
 """Onchain signal collector — DeFiLlama + Solana RPC."""
 from __future__ import annotations
 
+import os
 import httpx
 from datetime import datetime, timedelta, timezone
 
 DEFILLAMA_BASE = "https://api.llama.fi"
-SOLANA_RPC = "https://api.mainnet-beta.solana.com"
+SOLANA_RPC = os.environ.get("SOLANA_RPC_URL", "https://api.mainnet-beta.solana.com")
 TIMEOUT = 30
 
 
@@ -14,8 +15,8 @@ def _get(url: str, params: dict | None = None) -> dict | list | None:
         resp = httpx.get(url, params=params, timeout=TIMEOUT)
         resp.raise_for_status()
         return resp.json()
-    except Exception as e:
-        print(f"  [onchain] Failed to fetch {url}: {e}")
+    except Exception:
+        print(f"  [onchain] Failed to fetch {url.split('?')[0]}")
         return None
 
 
@@ -126,8 +127,8 @@ def get_network_performance() -> dict:
             "avg_tps": round(avg_tps),
             "samples": len(samples),
         }
-    except Exception as e:
-        return {"error": str(e)}
+    except Exception:
+        return {"error": "Failed to fetch TPS data"}
 
 
 def collect() -> dict:
