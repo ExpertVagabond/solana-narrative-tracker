@@ -47,8 +47,8 @@ def _parse_rss(source: str, url: str) -> list[dict]:
                     "summary": description,
                 })
         return items[:10]
-    except Exception as e:
-        print(f"  [social] RSS failed for {source}: {e}")
+    except Exception:
+        print(f"  [social] RSS failed for {source}")
         return []
 
 
@@ -129,8 +129,8 @@ def get_governance_proposals() -> list[dict]:
             }
             for pr in prs
         ]
-    except Exception as e:
-        print(f"  [social] SIMD fetch failed: {e}")
+    except Exception:
+        print("  [social] SIMD fetch failed")
         return []
 
 
