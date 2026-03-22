@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 """Solana Narrative Tracker — detects emerging narratives in the Solana ecosystem.
 
-Collects signals from onchain data, developer activity, market metrics,
-and social/news sources, then uses AI to synthesize them into actionable
-narratives with concrete build ideas.
+Security Architecture:
+- sanitize_error(): strips file paths, redacts secrets (20+ char tokens), truncates to 200 chars
+- validate_mode(): whitelisted CLI modes only — rejects unknown arguments
+- validate_path(): blocks path traversal (.. segments) and enforces max length
+- validate_signals(): schema validation on ingested data structures
+- validate_json_file(): size-bounded file loading with schema check
+- sanitize_string(): HTML-entity-encodes angle brackets, enforces max length
+- All API keys (ANTHROPIC_API_KEY, etc.) loaded from env vars — never hardcoded
+- All catch blocks use sanitize_error() — no raw exception messages reach output
+- File sizes capped at 50 MB to prevent resource exhaustion
 
 Usage:
     python main.py                # Full run: collect + analyze + generate site
