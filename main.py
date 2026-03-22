@@ -72,6 +72,14 @@ def validate_json_file(path: Path, max_size: int = _MAX_SIGNALS_SIZE) -> dict:
     return validate_signals(data)
 
 
+def sanitize_error(e: Exception) -> str:
+    """Sanitize error messages to prevent information leakage."""
+    msg = str(e)
+    msg = re.sub(r'/[^\s]+', '[path]', msg)
+    msg = re.sub(r'[A-Za-z0-9]{20,}', '[redacted]', msg)
+    return msg[:200]
+
+
 def sanitize_string(value: str, max_length: int = 1000) -> str:
     """Strip dangerous characters and enforce length."""
     if not isinstance(value, str):
@@ -197,11 +205,11 @@ def main() -> int:
         print("\nInterrupted by user.")
         return 130
     except (FileNotFoundError, json.JSONDecodeError, ValueError) as exc:
-        logger.error("Fatal error: %s", type(exc).__name__)
+        logger.error("Fatal error: %s", sanitize_error(exc))
         print(f"ERROR: {type(exc).__name__}: check logs for details")
         return 1
     except OSError as exc:
-        logger.error("IO error: %s", type(exc).__name__)
+        logger.error("IO error: %s", sanitize_error(exc))
         print("ERROR: File system error")
         return 1
 
