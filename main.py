@@ -31,7 +31,35 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
-# Input validation helpers (defined before any handler)
+# Security utilities (defined first — used throughout all modules)
+# ---------------------------------------------------------------------------
+
+
+def sanitize_error(e: Exception) -> str:
+    """Sanitize error messages to prevent information leakage."""
+    msg = str(e)
+    msg = re.sub(r'/[^\s]+', '[path]', msg)
+    msg = re.sub(r'[A-Za-z0-9]{20,}', '[redacted]', msg)
+    return msg[:200]
+
+
+def sanitize_string(value: str, max_length: int = 1000) -> str:
+    """Strip dangerous characters and enforce length."""
+    if not isinstance(value, str):
+        return ""
+    return value.replace("<", "&lt;").replace(">", "&gt;").strip()[:max_length]
+
+
+def require_env(name: str) -> str:
+    """Load required env var or fail with clear message (no raw value leaked)."""
+    val = os.environ.get(name)
+    if not val:
+        raise RuntimeError(f"Required env var {name} is not set")
+    return val
+
+
+# ---------------------------------------------------------------------------
+# Input validation helpers
 # ---------------------------------------------------------------------------
 
 _VALID_MODES = {"--full", "--collect-only", "--analyze-only", "--help"}
@@ -41,9 +69,10 @@ _SAFE_PATH_RE = re.compile(r"^[a-zA-Z0-9_./-]+$")
 
 
 def validate_mode(mode: str) -> str:
-    """Validate CLI mode argument."""
+    """Validate CLI mode argument against whitelist."""
+    mode = mode.strip()
     if mode not in _VALID_MODES:
-        raise ValueError(f"Unknown mode '{mode}'. Valid: {', '.join(sorted(_VALID_MODES))}")
+        raise ValueError(f"Unknown mode. Valid: {', '.join(sorted(_VALID_MODES))}")
     return mode
 
 
@@ -69,29 +98,18 @@ def validate_signals(signals: Any) -> dict:
 
 
 def validate_json_file(path: Path, max_size: int = _MAX_SIGNALS_SIZE) -> dict:
-    """Safely load and validate a JSON file."""
+    """Safely load and validate a JSON file with size bounds."""
+    path = validate_path(path)
     if not path.exists():
-        raise FileNotFoundError(f"File not found: {path}")
+        raise FileNotFoundError("Signals file not found")
     if path.stat().st_size > max_size:
-        raise ValueError(f"File too large: {path.stat().st_size} bytes (max {max_size})")
-    with open(path) as f:
-        data = json.load(f)
+        raise ValueError(f"File exceeds {max_size} byte limit")
+    try:
+        with open(path) as f:
+            data = json.load(f)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Invalid JSON: {sanitize_error(exc)}") from exc
     return validate_signals(data)
-
-
-def sanitize_error(e: Exception) -> str:
-    """Sanitize error messages to prevent information leakage."""
-    msg = str(e)
-    msg = re.sub(r'/[^\s]+', '[path]', msg)
-    msg = re.sub(r'[A-Za-z0-9]{20,}', '[redacted]', msg)
-    return msg[:200]
-
-
-def sanitize_string(value: str, max_length: int = 1000) -> str:
-    """Strip dangerous characters and enforce length."""
-    if not isinstance(value, str):
-        return ""
-    return value.replace("<", "&lt;").replace(">", "&gt;").strip()[:max_length]
 
 
 # ---------------------------------------------------------------------------
