@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-01T08:38:00.656709+00:00",
+  "generated_at": "2026-04-15T08:44:19.193428+00:00",
   "analysis": {
-    "analysis_date": "2026-04-01T08:38:00.656351+00:00",
+    "analysis_date": "2026-04-15T08:44:19.193095+00:00",
     "period": "Current fortnight",
     "executive_summary": "Analysis pending \u2014 raw signals collected successfully.",
     "narratives": [],
-    "raw_digest": "## ONCHAIN SIGNALS\nSolana TVL: $6,360,331,900\n  14d change: -8.2%\n  30d change: -5.0%\n\nTop protocols by TVL movement (7d):\n  OpenEden TBILL (RWA): TVL $135,008,508, 7d: +70.8%, 1d: +0.0%\n  Tothemoon (CEX): TVL $2,222,073, 7d: -65.4%, 1d: -10.8%\n  Adrastea Validator (Staking Pool): TVL $18,910,044, 7d: +55.1%, 1d: +1.2%\n  Marinade Select (Staking Pool): TVL $77,177,709, 7d: -28.9%, 1d: +0.8%\n  Lantern Staked SOL (Liquid Staking): TVL $3,706,727, 7d: +28.3%, 1d: +1.2%\n  Ondo Yield Assets (RWA): TVL $2,470,106,920, 7d: +23.8%, 1d: +4.5%\n  Synatra (Yield Aggregator): TVL $2,546,139, 7d: -23.3%, 1d: -57.2%\n  Binance Staked SOL (Liquid Staking): TVL $801,248,908, 7d: -19.4%, 1d: +0.7%\n  Jito Liquid Staking (Liquid Staking): TVL $964,702,325, 7d: -18.0%, 1d: -5.8%\n  Save SOL (Liquid Staking): TVL $4,446,780, 7d: -17.4%, 1d: +1.4%\n  Superstate USTB (RWA): TVL $636,827,994, 7d: -17.4%, 1d: +0.8%\n  Gate US (CEX): TVL $54,427,295, 7d: +17.3%, 1d: +1.1%\n  RateX DEX (Yield): TVL $8,271,162, 7d: -14.4%, 1d: -0.1%\n  Fastex (CEX): TVL $7,339,539, 7d: -14.3%, 1d: +1.8%\n  BitMart (CEX): TVL $18,212,693, 7d: +14.2%, 1d: +21.1%\n\nTop yield opportunities:\n  raydium-amm CC-USDC: APY 0.0% (30d avg: 193.9%), TVL $73,601,704\n  raydium-amm HOODX-USDC: APY 72.0% (30d avg: 143.0%), TVL $500,448\n  raydium-amm WSOL-PIPPIN: APY 174.2% (30d avg: 138.8%), TVL $5,668,668\n  raydium-amm TON-USDC: APY 0.0% (30d avg: 136.3%), TVL $70,758,249\n  raydium-amm WSOL-RENDER: APY 67.5% (30d avg: 98.6%), TVL $827,030\n  orca-dex SOL-FARTCOIN: APY 55.6% (30d avg: 85.1%), TVL $1,475,224\n  orca-dex ZEC-USDC: APY 160.4% (30d avg: 78.0%), TVL $537,797\n  orca-dex SOL-PUMP: APY 58.5% (30d avg: 73.7%), TVL $2,312,000\n  orca-dex SOL-USDC: APY 80.4% (30d avg: 70.4%), TVL $31,244,326\n  raydium-amm WSOL-USD1: APY 40.2% (30d avg: 68.4%), TVL $16,164,343\n\nNetwork TPS (avg): 3264\n\n## DEVELOPER SIGNALS\nTrending new Solana repos (last 30 days):\n  Justi1980/Dawn-Validator-BOT: \u2605539 | Python | Dawn Validator BOT \u2014 Automated node validation bot for Dawn Protocol testnet with multi-account supp\n    topics: automation, bandwidth-validation, blockchain, chrome-extension, cli-tool\n  happyboy4ty25/pump-analyzer: \u2605518 | N/A | Real-time monitoring & analytics platform for Pump.fun tokens. Track launches, analyze trends, and g\n    topics: analytics, crypto, dashboard, defi, javascript\n  BlockRunAI/brcc: \u2605278 | TypeScript | brcc \u2014 BlockRun Claude Code. Run Claude Code with any model (GPT-5, Claude, Gemini, DeepSeek, Grok, \n  PoIyClaw/Polymarket-Arbitrage-Trading-Bot: \u2605237 | TypeScript | Trading bot for Polymarket's \"Up or Down\" markets. It runs on 15-minute windows (Bitcoin, Ethereum, \n    topics: down, market, polymarket, up\n  pandaboost/DEXScreener-Trending: \u2605232 | JavaScript | Get your token to DEX Screener TOP 1-10. Automated trending service for Solana, Ethereum, BSC and Ba\n    topics: dexscreener, dexscreener-api, dexscreener-bot, dexscreener-trending, dexscreenertrending\n  pandaboost/DEXScreener-Reactions: \u2605191 | JavaScript | Buy DEX Screener reactions for your token \u2014 rocket \ud83d\ude80 fire \ud83d\udd25 poop \ud83d\udca9 flag \ud83d\udea9. Solana, ETH, BSC, Base. I\n    topics: dexscreener, dexscreener-bot, dexscreener-emoji, dexscreener-reactions, dexscreener-rocket\n  PlamenTSV/plamen: \u2605187 | Python | Autonomous Web3 security audit agent for Claude Code\n    topics: ai-agent, aptos, claude-code, ethereum, security-audit\n  pandaboost/PhantomTrending: \u2605113 | JavaScript | Phantom Wallet Trending for your Solana token \u2014 Top 1-10 placement. From $1,200/6h. Instant delivery\n    topics: crypto-marketing, phantom, phantom-token-promotion, phantom-trending, solana\n  pandaboost/PhantomChatTrending: \u2605107 | JavaScript | Phantom Chat Trending for your Solana token \u2014 reach active traders in Phantom chat. From $500/6h. In\n  frederik4u/Polymarket-Market-Maker-Trading-Bot: \u260591 | N/A | Solana copy trading bot\n\nMost active repos (last 14 days):\n  MahdiDirany/Mev-Bot_Ethereum_network: \u26050 | pushed: 2026-04-01\n  airlabjbkramvpfpcniug/uniswap-arbitrage-bot-2026: \u26051 | pushed: 2026-04-01\n  Mohammadbohra12/solana1: \u26051 | pushed: 2026-04-01\n  cassiano2s/solana2: \u26051 | pushed: 2026-04-01\n  iimmutable/docker-claude: \u26051 | pushed: 2026-04-01\n  Whillyyyy/Flashloan-Arbitrage-Bot: \u26050 | pushed: 2026-04-01\n  vinitpatel2016/crypto-shell-scripts: \u26050 | pushed: 2026-04-01\n  ayoubdrihmi/Coin-Flip: \u26051 | pushed: 2026-04-01\n  SpangeWenkies/solana-market-simulator: \u26050 | pushed: 2026-04-01\n  ChorusOne/chorus-one-sdk: \u26058 | pushed: 2026-04-01\n\nEcosystem topic breakdown:\n  ai agent: 5 repos, 8805 total stars\n  nft: 5 repos, 8439 total stars\n  defi: 5 repos, 8076 total stars\n  payments: 5 repos, 7449 total stars\n  mobile: 5 repos, 3693 total stars\n  depin: 5 repos, 1456 total stars\n  gaming: 5 repos, 1369 total stars\n  rwa: 5 repos, 664 total stars\n  blink: 5 repos, 170 total stars\n  token-extensions: 5 repos, 58 total stars\n\n## MARKET SIGNALS\nSOL: $83.70\n  24h: +1.0%, 7d: -8.9%, 14d: -11.2%, 30d: +0.9%\n\nTop Solana ecosystem tokens (by market cap):\n  USDT: $0.9996, 7d: -0.0%, 14d: -0.1%\n  USDC: $0.9998, 7d: -0.0%, 14d: -0.0%\n  SOL: $83.7100, 7d: -8.9%, 14d: -11.2%\n  USDS: $0.9999, 7d: +0.0%, 14d: +0.1%\n  WBTC: $68618.0000, 7d: -3.2%, 14d: -6.8%\n  LINK: $9.0700, 7d: -2.6%, 14d: -7.6%\n  CBBTC: $68704.0000, 7d: -3.1%, 14d: -7.1%\n  USDE: $0.9991, 7d: -0.0%, 14d: -0.1%\n  USD1: $0.9997, 7d: +0.1%, 14d: +0.0%\n  PYUSD: $0.9999, 7d: +0.0%, 14d: +0.0%\n  SUSDE: $1.2200, 7d: +0.0%, 14d: +0.0%\n  WLFI: $0.1000, 7d: -1.5%, 14d: -2.4%\n  USYC: $1.1200, 7d: +0.2%, 14d: +0.1%\n  BUIDL: $1.0000, 7d: +0.0%, 14d: +0.0%\n  USDG: $0.9999, 7d: -0.0%, 14d: +0.0%\n\nRelevant categories:\n  Real World Assets (RWA): mcap change 24h: +3.3%\n  Decentralized Finance (DeFi): mcap change 24h: +3.4%\n  Meme: mcap change 24h: -0.6%\n  Artificial Intelligence (AI): mcap change 24h: +3.3%\n  Decentralized Exchange (DEX): mcap change 24h: +3.7%\n  DePIN: mcap change 24h: +2.1%\n  RWA Protocol: mcap change 24h: +7.8%\n  Privacy Blockchain: mcap change 24h: -0.4%\n  Chain Abstraction: mcap change 24h: +4.9%\n  Cross-chain Communication: mcap change 24h: +4.8%\n\n## SOCIAL & NEWS SIGNALS\nRecent ecosystem articles:\n  [Solana Foundation] Solana Foundation Launches Solana Developer Platform\n    Solana Foundation launches Solana Developer Platform, a unified API platform for institutions and enterprises building on Solana.\n  [Solana Foundation] Bits to Bricks: Can Stablecoins Prevent De-Dollarization?\n    Atlantic Council's Alisha Chhangani joins Bits to Bricks to discuss stablecoins, dollar dominance, CBDCs, and the future of digital currency.\n  [Solana Foundation] Reimagining Global Payroll with Takenos\n    Streamlining Cross-Border Payments in Latin America and Beyond\n  [Solana Foundation] Webinar Recap: Corporate Treasury Onchain \u2014 24/7 Global Liquidity\n    Discover how global enterprises are moving corporate treasury onchain. Learn how Solana and Fireblocks enable 24/7 liquidity, instant global payouts, \n  [Solana Foundation] Solana Ecosystem Report: February 2026\n    February 2026 saw Solana's network-level metrics diverge from broader market contraction, with SOL-denominated TVL hitting all-time highs, RWA market \n  [Solana Foundation] How Cards Became the Trojan Horse for Stablecoin Adoption\n    Rain's Nick Pinto explains why stablecoin-backed cards are scaling quickly, how Rain settles with Visa in USDC, and why cards may be the distribution \n  [Solana Foundation] Webinar Recap: Payments on Solana - A Production-Ready Ecosystem\n    Recap of the \"Payments on Solana\" webinar featuring Sheraz Shere and Ilan Gitter, covering why Visa, PayPal, and Worldpay are building on Solana acros\n  [Solana Foundation] Matrixdock Brings XAUm to Solana, Expanding Institutional-Grade Tokenized Gold Access\n    Matrixdock deploys XAUm, Asia's largest tokenized gold product, on Solana, enabling institutional-grade tokenized gold with near-instant settlement an\n  [Solana Foundation] Solana Network Upgrades\n    A regularly-updated page giving the status of upgrades to the Solana network: Alpenglow, 100M CUs, SIMD 123, and more.\n  [Solana Foundation] WisdomTree Expands Tokenization Ecosystem to Solana\n    Today, WisdomTree brings its full suite of regulated tokenized funds to Solana. Both institutional and retail investors can now access money market, e\n  [Helius Blog] LaserStream Now Powers All Helius WebSockets\n    All WebSocket streaming is now powered by LaserStream infrastructure, delivering up to 200ms faster event delivery for Standard Solana WSS methods.\n  [Helius Blog] Helius Joins Solana Developer Platform\n    Learn how Helius is helping financial institutions and enterprises build applications on Solana.\n  [Helius Blog] Helius for Agents\n    One-shot anything on Solana with the Helius Claude Code Plugin, MCP Server with 60+ tools, CLI with 95+ commands, skills, and agent-friendly SDKs.\n  [Helius Blog] Introducing Gatekeeper: The Helius Edge Gateway\n    Gatekeeper is a unified, low-latency, global edge network that improves response times tens to hundreds of ms faster. Supports RPC, WSS, DAS, and more\n  [Helius Blog] Agave 3.1 Update: All You Need to Know\n    A roundup of the most important features and performance upgrades in the Solana Agave 3.0 validator client release.\n\nCrypto news mentioning Solana:\n\nGovernance (open SIMDs):\n  Update author for SBPF instruction encoding proposal (by ton3watt-ui)\n  Remove mentions to the verifier from SIMD-178 (by LucasSte)\n  SIMD-0504: Stricter Shred Validation (by ptaffet-jump)\n  SIMD-0503: Static Sysvars (by deanmlittle)\n  SIMD-0500: Disable deployment of SBPF-v0, SBPF-v1 and SBPF-v2 (by Lichtso)",
+    "raw_digest": "## ONCHAIN SIGNALS\nSolana TVL: $5,778,477,144\n  14d change: +7.5%\n  30d change: -20.4%\n\nTop protocols by TVL movement (7d):\n  Fastex (CEX): TVL $1,012,294, 7d: -76.6%, 1d: -0.3%\n  Remora Markets (RWA): TVL $1,879,546, 7d: +70.6%, 1d: +53.6%\n  CEX.IO (CEX): TVL $11,134,842, 7d: +53.1%, 1d: -4.0%\n  OKX (CEX): TVL $18,582,843,318, 7d: +39.5%, 1d: +35.2%\n  RockawayX (Risk Curators): TVL $36,660,167, 7d: +33.7%, 1d: +13.5%\n  BitMart (CEX): TVL $11,682,523, 7d: -32.9%, 1d: +4.9%\n  GMTrade (Derivatives): TVL $24,105,970, 7d: +31.5%, 1d: +2.6%\n  Carrot Lend (Lending): TVL $1,681,281, 7d: -21.4%, 1d: -0.4%\n  Vectis Finance (Yield): TVL $10,713,785, 7d: -20.9%, 1d: -1.4%\n  Hotcoin (CEX): TVL $8,533,084, 7d: +19.7%, 1d: +7.9%\n  Bridgers (Dexs): TVL $1,549,819, 7d: -17.0%, 1d: -0.2%\n  Tothemoon (CEX): TVL $2,728,148, 7d: -16.5%, 1d: -10.0%\n  Aster Bridge (Bridge): TVL $586,398,674, 7d: +16.0%, 1d: +0.7%\n  Allbridge Classic (Bridge): TVL $4,475,511, 7d: +15.7%, 1d: -13.7%\n  OSL (CEX): TVL $71,746,282, 7d: +14.8%, 1d: +4.5%\n\nTop yield opportunities:\n  orca-dex -EUR: APY 0.4% (30d avg: 1425.4%), TVL $4,777,660\n  raydium-amm \u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u8ba9\u4f60\u5151\u6362=\u60f3\u76d7\u4f60\u4e2a\u50bb\u903c\u7684U-USDC: APY 389.5% (30d avg: 389.5%), TVL $868,417\n  raydium-amm CRCLX-USDC: APY 33.2% (30d avg: 307.1%), TVL $2,782,586\n  raydium-amm WSOL-PIPPIN: APY 58.2% (30d avg: 179.8%), TVL $4,156,967\n  raydium-amm DOGE-USDT: APY 0.1% (30d avg: 150.4%), TVL $9,673,951\n  orca-dex SOL-FARTCOIN: APY 144.1% (30d avg: 143.6%), TVL $1,802,088\n  raydium-amm XMR-USDC: APY 0.0% (30d avg: 125.2%), TVL $31,690,772\n  raydium-amm XMR-USDC: APY 0.0% (30d avg: 113.5%), TVL $47,128,790\n  raydium-amm TAO-USDC: APY 0.0% (30d avg: 108.2%), TVL $46,801,577\n  raydium-amm WSOL-RENDER: APY 61.7% (30d avg: 90.8%), TVL $713,792\n\nNetwork TPS (avg): 2990\n\n## DEVELOPER SIGNALS\nTrending new Solana repos (last 30 days):\n  happyboy4ty25/pump-analyzer: \u2605516 | N/A | Real-time monitoring & analytics platform for Pump.fun tokens. Track launches, analyze trends, and g\n    topics: analytics, crypto, dashboard, defi, javascript\n  zonelessdev/zoneless: \u2605217 | TypeScript | Open-source Stripe Connect alternative. ~$0.002 payout fees. Identical API to Stripe. Instant global\n    topics: marketplace, open-source, payments, payouts, self-hosted\n  pandaboost/PhantomTrending: \u2605113 | JavaScript | Phantom Wallet Trending for your Solana token \u2014 Top 1-10 placement. From $1,200/6h. Instant delivery\n    topics: crypto-marketing, phantom, phantom-token-promotion, phantom-trending, solana\n  pandaboost/PhantomChatTrending: \u2605107 | JavaScript | Phantom Chat Trending for your Solana token \u2014 reach active traders in Phantom chat. From $500/6h. In\n  sendaifun/solana-new: \u260580 | TypeScript | think. build. ship. tasteful & useful crypto apps. using a curated skills + knowledge base for AI ag\n  booboomrtwix/Solana-FarmBot-2026: \u260568 | TypeScript | High-performance BIP-39 mnemonic recovery tool and cryptographic security auditor. Open-source frame\n    topics: asset-management, auto-compounding, automation, blockchain, bot\n  jesuschelbezmaski7/polymarket-trading-bot-desktop-crypto: \u260557 | N/A | An elite, high-performance 2026 desktop application engineered for automated Polymarket prediction t\n    topics: bitcoin, block-engine, blockchain, bot, crypto\n  solana-foundation/mpp-sdk: \u260552 | Rust | Solana payment method for the Machine Payments Protocol.\n    topics: mpp, payments, solana, tempo, x402\n  Maxiinreanimate/Percolate: \u260546 | Rust | The first and only multichain permissionless perpetual futures DEX.\n    topics: anchor, evm, foundry, multichain, percolator\n  marcielmalta/Ledger-Vault-Firmware-Monorepo-Crypto-Suite: \u260545 | N/A | Ultimate Trezor Wallet Firmware 2026 \ud83d\ude80 | Secure Crypto Hardware & Blockchain Solutions Monorepo\n    topics: bitcoin, blockchain, cold-wallet, cold-wallet-extension, cold-wallet-futures\n\nMost active repos (last 14 days):\n  pink-potat0/Lykeion: \u26050 | pushed: 2026-04-15\n  narsibhati-dev/solana-starter: \u26052 | pushed: 2026-04-15\n  Junnii234/solana-token-bot: \u26050 | pushed: 2026-04-15\n  X-PACT/PrivateDAO: \u26053 | pushed: 2026-04-15\n  kekdios/solvequest: \u26050 | pushed: 2026-04-15\n  PayAINetwork/payai-x402-skill: \u26050 | pushed: 2026-04-15\n  curiousleeo/kamino-pulse: \u26050 | pushed: 2026-04-15\n  xia-zhang-web3/solana-copy-bot: \u26050 | pushed: 2026-04-15\n  Drakkar-Software/OctoBot: \u26055642 | pushed: 2026-04-15\n  robfiasco/gossip-app: \u26050 | pushed: 2026-04-15\n\nEcosystem topic breakdown:\n  nft: 5 repos, 8435 total stars\n  defi: 5 repos, 8083 total stars\n  payments: 5 repos, 3948 total stars\n  mobile: 5 repos, 3698 total stars\n  ai agent: 5 repos, 2420 total stars\n  depin: 5 repos, 1684 total stars\n  gaming: 5 repos, 846 total stars\n  rwa: 5 repos, 730 total stars\n  blink: 5 repos, 162 total stars\n  token-extensions: 5 repos, 57 total stars\n\n## MARKET SIGNALS\nSOL: $83.18\n  24h: -3.4%, 7d: -1.6%, 14d: -1.5%, 30d: -11.0%\n\nTop Solana ecosystem tokens (by market cap):\n  USDT: $1.0000, 7d: +0.0%, 14d: +0.1%\n  USDC: $0.9998, 7d: -0.0%, 14d: -0.0%\n  SOL: $83.1700, 7d: -1.6%, 14d: -1.5%\n  USDS: $0.9997, 7d: -0.0%, 14d: -0.1%\n  WBTC: $73999.0000, 7d: +3.4%, 14d: +7.1%\n  LINK: $9.0800, 7d: -1.6%, 14d: +0.1%\n  CBBTC: $74135.0000, 7d: +3.4%, 14d: +7.2%\n  USDE: $0.9999, 7d: +0.0%, 14d: +0.1%\n  PYUSD: $0.9999, 7d: -0.0%, 14d: -0.0%\n  USD1: $0.9993, 7d: -0.0%, 14d: -0.1%\n  SUSDE: $1.2300, 7d: -0.8%, 14d: +0.6%\n  USYC: $1.1200, 7d: +0.0%, 14d: -0.0%\n  WLFI: $0.0798, 7d: -18.7%, 14d: -20.3%\n  BUIDL: $1.0000, 7d: +0.0%, 14d: +0.0%\n  USDG: $0.9997, 7d: -0.0%, 14d: -0.0%\n\nRelevant categories:\n  Real World Assets (RWA): mcap change 24h: +0.2%\n  Decentralized Finance (DeFi): mcap change 24h: -1.4%\n  Meme: mcap change 24h: -1.0%\n  Artificial Intelligence (AI): mcap change 24h: -3.0%\n  Decentralized Exchange (DEX): mcap change 24h: -1.8%\n  RWA Protocol: mcap change 24h: -2.8%\n  DePIN: mcap change 24h: -2.9%\n  Privacy Blockchain: mcap change 24h: -2.0%\n  Chain Abstraction: mcap change 24h: -3.4%\n  Cross-chain Communication: mcap change 24h: -2.9%\n\n## SOCIAL & NEWS SIGNALS\nRecent ecosystem articles:\n  [Solana Foundation] Raising the Bar on Solana Ecosystem Security\n    Introducing STRIDE and Solana Incident Response Network\n  [Solana Foundation] Solana Ecosystem Roundup: March 2026\n    March brought a dense run of developments across regulation, real-world assets, enterprise infrastructure, payments, consumer apps, and protocol desig\n  [Solana Foundation] Solana Foundation Launches Solana Developer Platform\n    Solana Foundation launches Solana Developer Platform, a unified API platform for institutions and enterprises building on Solana.\n  [Solana Foundation] Bits to Bricks: Can Stablecoins Prevent De-Dollarization?\n    Atlantic Council's Alisha Chhangani joins Bits to Bricks to discuss stablecoins, dollar dominance, CBDCs, and the future of digital currency.\n  [Solana Foundation] Reimagining Global Payroll with Takenos\n    Streamlining Cross-Border Payments in Latin America and Beyond\n  [Solana Foundation] Webinar Recap: Corporate Treasury Onchain \u2014 24/7 Global Liquidity\n    Discover how global enterprises are moving corporate treasury onchain. Learn how Solana and Fireblocks enable 24/7 liquidity, instant global payouts, \n  [Solana Foundation] Solana Ecosystem Report: February 2026\n    February 2026 saw Solana's network-level metrics diverge from broader market contraction, with SOL-denominated TVL hitting all-time highs, RWA market \n  [Solana Foundation] How Cards Became the Trojan Horse for Stablecoin Adoption\n    Rain's Nick Pinto explains why stablecoin-backed cards are scaling quickly, how Rain settles with Visa in USDC, and why cards may be the distribution \n  [Solana Foundation] Webinar Recap: Payments on Solana - A Production-Ready Ecosystem\n    Recap of the \"Payments on Solana\" webinar featuring Sheraz Shere and Ilan Gitter, covering why Visa, PayPal, and Worldpay are building on Solana acros\n  [Solana Foundation] Matrixdock Brings XAUm to Solana, Expanding Institutional-Grade Tokenized Gold Access\n    Matrixdock deploys XAUm, Asia's largest tokenized gold product, on Solana, enabling institutional-grade tokenized gold with near-instant settlement an\n  [Helius Blog] Constellation: A Proposal For MCP on Solana\n    Constellation is Anza's proposal to implement Multiple Concurrent Proposers (MCP) on Solana. Learn how it works, the problems it solves, and open ques\n  [Helius Blog] LaserStream Now Powers All Helius WebSockets\n    All WebSocket streaming is now powered by LaserStream infrastructure, delivering up to 200ms faster event delivery for Standard Solana WSS methods.\n  [Helius Blog] Helius Joins Solana Developer Platform\n    Learn how Helius is helping financial institutions and enterprises build applications on Solana.\n  [Helius Blog] Helius for Agents\n    One-shot anything on Solana with the Helius Claude Code Plugin, MCP Server with 60+ tools, CLI with 95+ commands, skills, and agent-friendly SDKs.\n  [Helius Blog] Introducing Gatekeeper: The Helius Edge Gateway\n    Gatekeeper is a unified, low-latency, global edge network that improves response times tens to hundreds of ms faster. Supports RPC, WSS, DAS, and more\n\nCrypto news mentioning Solana:\n\nGovernance (open SIMDs):\n  Clarify requested accounts data size and heap treatment in TXV1 (by apfitzge)\n  template: updates to SIMD template (by topointon-jump)\n  SIMD-0186: Define fee-only semantics (by 2501babe)\n  SIMD-0503: Static Sysvars (by deanmlittle)\n  SIMD-0500: Disable deployment of SBPF-v0, SBPF-v1 and SBPF-v2 (by Lichtso)",
     "meta": {
       "signals_analyzed": 190,
       "data_sources": [
@@ -20,82 +20,26 @@
   },
   "highlights": {
     "sol_price": {
-      "price_usd": 83.7,
-      "market_cap": 47925143040,
-      "volume_24h": 4435446814,
-      "change_24h": 1.03,
-      "change_7d": -8.89,
-      "change_14d": -11.24,
-      "change_30d": 0.92,
+      "price_usd": 83.18,
+      "market_cap": 47815973810,
+      "volume_24h": 4489583794,
+      "change_24h": -3.42,
+      "change_7d": -1.57,
+      "change_14d": -1.48,
+      "change_30d": -11.04,
       "ath": 293.31,
-      "ath_change_pct": -71.46
+      "ath_change_pct": -71.64
     },
     "tvl": {
-      "current_tvl": 6360331900,
-      "tvl_14d_ago": 6931227206,
-      "tvl_30d_ago": 6698061291,
-      "change_14d_pct": -8.24,
-      "change_30d_pct": -5.04,
+      "current_tvl": 5778477144,
+      "tvl_14d_ago": 5375596213,
+      "tvl_30d_ago": 7262258282,
+      "change_14d_pct": 7.49,
+      "change_30d_pct": -20.43,
       "data_points": [
         {
-          "date": 1772496000,
-          "tvl": 6698061291
-        },
-        {
-          "date": 1772582400,
-          "tvl": 6591528765
-        },
-        {
-          "date": 1772668800,
-          "tvl": 6884336641
-        },
-        {
-          "date": 1772755200,
-          "tvl": 6762158090
-        },
-        {
-          "date": 1772841600,
-          "tvl": 6602144728
-        },
-        {
-          "date": 1772928000,
-          "tvl": 6545497103
-        },
-        {
-          "date": 1773014400,
-          "tvl": 6391707740
-        },
-        {
-          "date": 1773100800,
-          "tvl": 6638308963
-        },
-        {
-          "date": 1773187200,
-          "tvl": 6590095283
-        },
-        {
-          "date": 1773273600,
-          "tvl": 6671433645
-        },
-        {
-          "date": 1773360000,
-          "tvl": 6910246488
-        },
-        {
-          "date": 1773446400,
-          "tvl": 6844789381
-        },
-        {
-          "date": 1773532800,
-          "tvl": 6960781188
-        },
-        {
-          "date": 1773619200,
-          "tvl": 7137221027
-        },
-        {
           "date": 1773705600,
-          "tvl": 7262258281
+          "tvl": 7262258282
         },
         {
           "date": 1773792000,
@@ -135,7 +79,7 @@
         },
         {
           "date": 1774569600,
-          "tvl": 6546679237
+          "tvl": 6546679238
         },
         {
           "date": 1774656000,
@@ -155,122 +99,178 @@
         },
         {
           "date": 1775001600,
-          "tvl": 6360331900
+          "tvl": 6339823971
+        },
+        {
+          "date": 1775088000,
+          "tvl": 5375596213
+        },
+        {
+          "date": 1775174400,
+          "tvl": 5391893168
+        },
+        {
+          "date": 1775260800,
+          "tvl": 5354584062
+        },
+        {
+          "date": 1775347200,
+          "tvl": 5514370581
+        },
+        {
+          "date": 1775433600,
+          "tvl": 5531136937
+        },
+        {
+          "date": 1775520000,
+          "tvl": 5388274814
+        },
+        {
+          "date": 1775606400,
+          "tvl": 5685348895
+        },
+        {
+          "date": 1775692800,
+          "tvl": 5701315599
+        },
+        {
+          "date": 1775779200,
+          "tvl": 5725851004
+        },
+        {
+          "date": 1775865600,
+          "tvl": 5790072952
+        },
+        {
+          "date": 1775952000,
+          "tvl": 5810755670
+        },
+        {
+          "date": 1776038400,
+          "tvl": 5569262594
+        },
+        {
+          "date": 1776124800,
+          "tvl": 5905842885
+        },
+        {
+          "date": 1776211200,
+          "tvl": 5778477144
         }
       ]
     },
     "top_movers": [
       {
-        "name": "OpenEden TBILL",
-        "category": "RWA",
-        "tvl": 135008508,
-        "change_1d": 0.01,
-        "change_7d": 70.78,
-        "chains": [
-          "Ethereum",
-          "Ripple",
-          "Solana",
-          "Arbitrum"
-        ],
-        "url": "https://portal.openeden.com/bills-campaign?refCode=x1z3OOidAS"
-      },
-      {
-        "name": "Tothemoon",
+        "name": "Fastex",
         "category": "CEX",
-        "tvl": 2222073,
-        "change_1d": -10.78,
-        "change_7d": -65.38,
+        "tvl": 1012294,
+        "change_1d": -0.3,
+        "change_7d": -76.58,
         "chains": [
-          "Bitcoin",
           "Ethereum",
           "Tron",
           "Binance",
-          "Polygon",
+          "Solana",
+          "Avalanche",
+          "Aptos",
           "Arbitrum",
           "Optimism",
+          "Litecoin",
+          "Ripple",
+          "Cardano",
+          "Polkadot",
+          "Bahamut",
+          "Bitcoin"
+        ],
+        "url": "https://exchange.fastex.com"
+      },
+      {
+        "name": "Remora Markets",
+        "category": "RWA",
+        "tvl": 1879546,
+        "change_1d": 53.63,
+        "change_7d": 70.62,
+        "chains": [
+          "Solana"
+        ],
+        "url": "https://remoramarkets.xyz/"
+      },
+      {
+        "name": "CEX.IO",
+        "category": "CEX",
+        "tvl": 11134842,
+        "change_1d": -3.99,
+        "change_7d": 53.15,
+        "chains": [
+          "Ethereum",
+          "Tron",
+          "Binance",
+          "Solana",
+          "Ripple",
+          "Sui",
+          "Litecoin",
+          "Cosmos",
+          "Stellar",
+          "Polygon",
+          "Cardano",
+          "Polkadot",
+          "Bitcoin"
+        ],
+        "url": "http://cex.io/"
+      },
+      {
+        "name": "OKX",
+        "category": "CEX",
+        "tvl": 18582843318,
+        "change_1d": 35.24,
+        "change_7d": 39.46,
+        "chains": [
+          "Ethereum",
+          "Bitcoin",
+          "Solana",
+          "Doge",
+          "Tron",
+          "Litecoin",
+          "Ripple",
+          "Arbitrum",
+          "Aptos",
+          "Optimism",
+          "Base",
+          "Linea",
           "TON",
+          "zkSync Era",
+          "Scroll",
           "Avalanche",
-          "Solana"
+          "Polygon",
+          "Starknet",
+          "Polkadot"
         ],
-        "url": "https://tothemoon.com"
+        "url": "https://www.okx.com"
       },
       {
-        "name": "Adrastea Validator",
-        "category": "Staking Pool",
-        "tvl": 18910044,
-        "change_1d": 1.16,
-        "change_7d": 55.08,
+        "name": "RockawayX",
+        "category": "Risk Curators",
+        "tvl": 36660167,
+        "change_1d": 13.49,
+        "change_7d": 33.69,
         "chains": [
-          "Solana"
+          "Solana",
+          "Plume Mainnet",
+          "Ethereum",
+          "Etherlink"
         ],
-        "url": "https://adrastea.fi/"
-      },
-      {
-        "name": "Marinade Select",
-        "category": "Staking Pool",
-        "tvl": 77177709,
-        "change_1d": 0.83,
-        "change_7d": -28.89,
-        "chains": [
-          "Solana"
-        ],
-        "url": "https://app.marinade.finance/"
-      },
-      {
-        "name": "Lantern Staked SOL",
-        "category": "Liquid Staking",
-        "tvl": 3706727,
-        "change_1d": 1.2,
-        "change_7d": 28.32,
-        "chains": [
-          "Solana"
-        ],
-        "url": "https://www.lantern.one/"
+        "url": "https://rockawayx.com/"
       }
     ],
     "trending_repos": [
       {
-        "name": "Justi1980/Dawn-Validator-BOT",
-        "description": "Dawn Validator BOT \u2014 Automated node validation bot for Dawn Protocol testnet with multi-account support, proxy rotation, validator registration, keepalive pings, reward tracking, and Rich CLI interfac",
-        "stars": 539,
-        "forks": 325,
-        "language": "Python",
-        "created_at": "2026-03-09T10:52:37Z",
-        "updated_at": "2026-03-18T00:11:06Z",
-        "pushed_at": "2026-03-13T09:51:24Z",
-        "url": "https://github.com/Justi1980/Dawn-Validator-BOT",
-        "topics": [
-          "automation",
-          "bandwidth-validation",
-          "blockchain",
-          "chrome-extension",
-          "cli-tool",
-          "crypto",
-          "cryptobot",
-          "dawn-internet",
-          "dawn-validator",
-          "decentralized-internet",
-          "depin",
-          "educational",
-          "keep-alive",
-          "multi-threading",
-          "proxy-rotation",
-          "python",
-          "solana",
-          "testnet",
-          "token-management",
-          "validator-bot"
-        ],
-        "open_issues": 0
-      },
-      {
         "name": "happyboy4ty25/pump-analyzer",
         "description": "Real-time monitoring & analytics platform for Pump.fun tokens. Track launches, analyze trends, and get instant alerts \u2014 powered by WebSockets. Built with HTML, CSS & JavaScript.",
-        "stars": 518,
+        "stars": 516,
         "forks": 137,
         "language": null,
         "created_at": "2026-03-27T12:15:42Z",
-        "updated_at": "2026-03-29T20:09:23Z",
+        "updated_at": "2026-04-08T14:11:53Z",
         "pushed_at": "2026-03-27T12:17:29Z",
         "url": "https://github.com/happyboy4ty25/pump-analyzer",
         "topics": [
@@ -289,60 +289,94 @@
           "web3",
           "websocket"
         ],
-        "open_issues": 1
+        "open_issues": 0
       },
       {
-        "name": "BlockRunAI/brcc",
-        "description": "brcc \u2014 BlockRun Claude Code. Run Claude Code with any model (GPT-5, Claude, Gemini, DeepSeek, Grok, 40+). No rate limits, no account needed. Pay per use with USDC on Base or Solana.",
-        "stars": 278,
-        "forks": 26,
+        "name": "zonelessdev/zoneless",
+        "description": "Open-source Stripe Connect alternative. ~$0.002 payout fees. Identical API to Stripe. Instant global USDC payouts. Self-hosted.",
+        "stars": 217,
+        "forks": 16,
         "language": "TypeScript",
-        "created_at": "2026-03-22T05:57:55Z",
-        "updated_at": "2026-04-01T08:03:15Z",
-        "pushed_at": "2026-03-31T13:29:00Z",
-        "url": "https://github.com/BlockRunAI/brcc",
+        "created_at": "2026-03-23T13:06:49Z",
+        "updated_at": "2026-04-15T07:25:14Z",
+        "pushed_at": "2026-04-14T15:03:36Z",
+        "url": "https://github.com/zonelessdev/zoneless",
+        "topics": [
+          "marketplace",
+          "open-source",
+          "payments",
+          "payouts",
+          "self-hosted",
+          "solana",
+          "stablecoins",
+          "stripe",
+          "stripe-connect",
+          "usdc"
+        ],
+        "open_issues": 0
+      },
+      {
+        "name": "pandaboost/PhantomTrending",
+        "description": "Phantom Wallet Trending for your Solana token \u2014 Top 1-10 placement. From $1,200/6h. Instant delivery via PandaBoost API.",
+        "stars": 113,
+        "forks": 23,
+        "language": "JavaScript",
+        "created_at": "2026-03-22T18:28:34Z",
+        "updated_at": "2026-03-24T01:10:16Z",
+        "pushed_at": "2026-03-22T18:38:22Z",
+        "url": "https://github.com/pandaboost/PhantomTrending",
+        "topics": [
+          "crypto-marketing",
+          "phantom",
+          "phantom-token-promotion",
+          "phantom-trending",
+          "solana",
+          "solana-trending"
+        ],
+        "open_issues": 0
+      },
+      {
+        "name": "pandaboost/PhantomChatTrending",
+        "description": "Phantom Chat Trending for your Solana token \u2014 reach active traders in Phantom chat. From $500/6h. Instant delivery via PandaBoost API.",
+        "stars": 107,
+        "forks": 19,
+        "language": "JavaScript",
+        "created_at": "2026-03-22T18:39:15Z",
+        "updated_at": "2026-03-24T01:50:21Z",
+        "pushed_at": "2026-03-22T18:41:09Z",
+        "url": "https://github.com/pandaboost/PhantomChatTrending",
         "topics": [],
         "open_issues": 0
       },
       {
-        "name": "PoIyClaw/Polymarket-Arbitrage-Trading-Bot",
-        "description": "Trading bot for Polymarket's \"Up or Down\" markets. It runs on 15-minute windows (Bitcoin, Ethereum, Solana, XRP) and uses a price prediction algorithm to place limit orders when it thinks it's got an ",
-        "stars": 237,
-        "forks": 98,
+        "name": "sendaifun/solana-new",
+        "description": "think. build. ship. tasteful & useful crypto apps. using a curated skills + knowledge base for AI agents on solana contracts & integrations",
+        "stars": 80,
+        "forks": 21,
         "language": "TypeScript",
-        "created_at": "2026-03-30T18:20:21Z",
-        "updated_at": "2026-04-01T08:15:13Z",
-        "pushed_at": "2026-03-30T19:09:29Z",
-        "url": "https://github.com/PoIyClaw/Polymarket-Arbitrage-Trading-Bot",
-        "topics": [
-          "down",
-          "market",
-          "polymarket",
-          "up"
-        ],
-        "open_issues": 0
-      },
-      {
-        "name": "pandaboost/DEXScreener-Trending",
-        "description": "Get your token to DEX Screener TOP 1-10. Automated trending service for Solana, Ethereum, BSC and Base via PandaBoost API. SOL from $1,200/12h \u00b7 ETH/BSC/Base from $1,000/24h. Instant start, full refun",
-        "stars": 232,
-        "forks": 42,
-        "language": "JavaScript",
-        "created_at": "2026-03-09T13:51:33Z",
-        "updated_at": "2026-03-23T06:56:09Z",
-        "pushed_at": "2026-03-09T13:55:28Z",
-        "url": "https://github.com/pandaboost/DEXScreener-Trending",
-        "topics": [
-          "dexscreener",
-          "dexscreener-api",
-          "dexscreener-bot",
-          "dexscreener-trending",
-          "dexscreenertrending"
-        ],
-        "open_issues": 0
+        "created_at": "2026-03-23T16:46:53Z",
+        "updated_at": "2026-04-15T08:07:55Z",
+        "pushed_at": "2026-04-13T04:47:05Z",
+        "url": "https://github.com/sendaifun/solana-new",
+        "topics": [],
+        "open_issues": 4
       }
     ],
     "recent_news": [
+      {
+        "source": "Solana Foundation",
+        "title": "Raising the Bar on Solana Ecosystem Security",
+        "url": "https://solana.com/news/solana-ecosystem-security",
+        "published": "Mon, 06 Apr 2026 19:30:00 GMT",
+        "summary": "Introducing STRIDE and Solana Incident Response Network"
+      },
+      {
+        "source": "Solana Foundation",
+        "title": "Solana Ecosystem Roundup: March 2026",
+        "url": "https://solana.com/news/solana-ecosystem-roundup-march-2026",
+        "published": "Sun, 05 Apr 2026 19:03:00 GMT",
+        "summary": "March brought a dense run of developments across regulation, real-world assets, enterprise infrastructure, payments, consumer apps, and protocol design. SOL received a clearer regulatory designation in the U.S., RWA activity on Solana reached new highs across holders, value, and lending. Enterprise platforms pushed more Solana infrastructure into live systems."
+      },
       {
         "source": "Solana Foundation",
         "title": "Solana Foundation Launches Solana Developer Platform",
@@ -363,20 +397,6 @@
         "url": "https://solana.com/news/case-study-takenos",
         "published": "Tue, 17 Mar 2026 00:00:00 GMT",
         "summary": "Streamlining Cross-Border Payments in Latin America and Beyond"
-      },
-      {
-        "source": "Solana Foundation",
-        "title": "Webinar Recap: Corporate Treasury Onchain \u2014 24/7 Global Liquidity",
-        "url": "https://solana.com/news/webinar-recap-corporate-treasury-onchain",
-        "published": "Tue, 17 Mar 2026 00:00:00 GMT",
-        "summary": "Discover how global enterprises are moving corporate treasury onchain. Learn how Solana and Fireblocks enable 24/7 liquidity, instant global payouts, and yield generation using stablecoins."
-      },
-      {
-        "source": "Solana Foundation",
-        "title": "Solana Ecosystem Report: February 2026",
-        "url": "https://solana.com/news/state-of-solana-february-2026",
-        "published": "Thu, 05 Mar 2026 00:00:00 GMT",
-        "summary": "February 2026 saw Solana's network-level metrics diverge from broader market contraction, with SOL-denominated TVL hitting all-time highs, RWA market cap reaching $1.71B, and stablecoin transactions surpassing $650B."
       }
     ]
   }
