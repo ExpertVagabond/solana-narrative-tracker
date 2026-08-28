@@ -4,7 +4,7 @@ version = "1.0.0"
 edition = "2024"
 description = "AI-powered Solana ecosystem narrative detection — GitHub, market, onchain, social signals"
 license = "MIT"
-authors = ["Purple Squirrel Media LLC"]
+authors = ["Matthew Karsten <matthewkarstenconnects@gmail.com>"]
 
 [[bin]]
 name = "narrative-tracker"
