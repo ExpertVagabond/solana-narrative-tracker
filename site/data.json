@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-01T15:20:55.837803+00:00",
+  "generated_at": "2026-10-15T13:17:32.398124+00:00",
   "analysis": {
-    "analysis_date": "2026-10-01T15:20:55.837526+00:00",
+    "analysis_date": "2026-10-15T13:17:32.397663+00:00",
     "period": "Current fortnight",
     "executive_summary": "Analysis pending \u2014 raw signals collected successfully.",
     "narratives": [],
-    "raw_digest": "## ONCHAIN SIGNALS\nSolana TVL: $6,526,438,032\n  14d change: +10.7%\n  30d change: +15.3%\n\nTop protocols by TVL movement (7d):\n  CEX.IO (CEX): TVL $2,476,190, 7d: +98.8%, 1d: +35.4%\n  Gate US (CEX): TVL $9,821,587, 7d: -80.4%, 1d: -0.5%\n  Kamino Institutional Yield (Uncollateralized Lending): TVL $4,599,547, 7d: +78.6%, 1d: +29.4%\n  FluxBeam (Dexs): TVL $3,473,910, 7d: +77.2%, 1d: +23.6%\n  PancakeSwap AMM V3 (Dexs): TVL $343,492,367, 7d: +76.7%, 1d: +0.1%\n  Reflect Tranches (Yield): TVL $1,580,111, 7d: +54.6%, 1d: +6.9%\n  Tothemoon (CEX): TVL $4,620,236, 7d: +52.2%, 1d: -18.0%\n  TruStake (Liquid Staking): TVL $2,964,248, 7d: -47.6%, 1d: -3.4%\n  Orderly Bridge (Bridge): TVL $16,198,448, 7d: -43.9%, 1d: -44.0%\n  Streamflow (Payments): TVL $16,639,343, 7d: +38.0%, 1d: +1.6%\n  BigONE (CEX): TVL $47,100,132, 7d: +27.2%, 1d: -1.7%\n  Backpack (CEX): TVL $669,974,181, 7d: +24.8%, 1d: +9.2%\n  Exponent Strategy Vaults (Onchain Capital Allocator): TVL $12,033,116, 7d: +23.9%, 1d: -0.7%\n  Bitstamp (CEX): TVL $3,626,601,959, 7d: -23.7%, 1d: -3.0%\n  Deribit (CEX): TVL $4,208,625,855, 7d: -20.3%, 1d: -17.6%\n\nTop yield opportunities:\n\nNetwork TPS (avg): 4767\n\n## DEVELOPER SIGNALS\nTrending new Solana repos (last 30 days):\n  nhovongoc0-max/meme-radar: \u2605499 | JavaScript | Meme\u96f7\u8fbe\u5f00\u6e90\u7248\uff1a\u672c\u5730\u53ea\u8bfb\u3001\u591a\u94fe Meme \u5019\u9009\u626b\u63cf\u4e0e\u4eba\u5de5\u590d\u6838\u5de5\u5177\n    topics: bsc, crypto, gmgn, meme, security\n  Kylerkrausemdzyra64/Crypto-Checker: \u260589 | Python | Python-based crypto wallet analysis tool with multi-threaded address and seed phrase checking (up to\n    topics: address-balance-tool, btc-scanner, check-crypto-balance, checker, checker-crypto\n  openarbmev/Openarb-Trade-SDK: \u260586 | Rust | Rust SDK for low-latency Solana DEX trading bots\n  propavingk/SlotDrift: \u260564 | Python | Slot continuity and fork analysis for captured Solana slot records - gaps, skips, duplicate slots an\n    topics: blockchain, cli, continuity, data-analysis, developer-tools\n  sopersone/CROWBRAIN: \u260538 | Python | Experimental market observation terminal for Solana and Robinhood Chain, featuring a crow-inspired i\n  solana-foundation/solana-microscope: \u260537 | Rust | Solana Microscope\n  andreysidorov1985/Solana-Drainer-Tool: \u260535 | Python | Solana Drainer Tool \u2014 Automated SOL and SPL token drainer for Solana wallets with real-time balance \n    topics: auto-withdraw-script, drain-bot, ethereum, phantom-manager, private-key-manager\n  uni-launch/solana-token-creator: \u260532 | HTML | Create a Solana token without code \u2014 SPL and Token-2022, authorities, metadata, rent, fees and liqui\n  PillCrew/claimchain: \u260527 | Python | Verify that an AI agent's on-chain claims are actually true. A claim-level groundedness checker for \n    topics: ai-agents, crypto-trading, dexscreener, elizaos, fact-checking\n  uni-launch/token-launch-handbook: \u260526 | HTML | Create and manage your own token without code \u2014 Solana, Ethereum, Base, BNB Chain and 5 more network\n\nMost active repos (last 14 days):\n  thewaleogun/solana-music-tokens: \u26050 | pushed: 2026-10-01\n  superpios/node-scorecard: \u26053 | pushed: 2026-10-01\n  manuelfeb056-max/stocknine-terminal: \u26050 | pushed: 2026-10-01\n  nitindahiya-dev/stream-pay-solana: \u26050 | pushed: 2026-10-01\n  NeverSight/NeverD: \u260573 | pushed: 2026-10-01\n  Jubosaurus/solana-meme-paperbot: \u26051 | pushed: 2026-10-01\n  tyofthestars11-lab/phi-ledger-cookie-chain: \u26051 | pushed: 2026-10-01\n  usestrak/strak: \u26050 | pushed: 2026-10-01\n  StakeNode777/solana-node-manager: \u26053 | pushed: 2026-10-01\n  Beanlt/san-gems-sol: \u26050 | pushed: 2026-10-01\n\nEcosystem topic breakdown:\n  defi: 5 repos, 28885 total stars\n  payments: 5 repos, 14262 total stars\n  ai agent: 5 repos, 12674 total stars\n  nft: 5 repos, 8573 total stars\n  mobile: 5 repos, 3859 total stars\n  depin: 5 repos, 1860 total stars\n  gaming: 5 repos, 981 total stars\n  rwa: 5 repos, 654 total stars\n  blink: 5 repos, 161 total stars\n  token-extensions: 5 repos, 92 total stars\n\n## MARKET SIGNALS\nSOL: $117.68\n  24h: -0.7%, 7d: +2.8%, 14d: +16.5%, 30d: +15.4%\n\nTop Solana ecosystem tokens (by market cap):\n  USDT: $0.9997, 7d: +0.0%, 14d: +0.1%\n  USDC: $0.9999, 7d: +0.0%, 14d: +0.0%\n  SOL: $117.6800, 7d: +2.1%, 14d: +16.6%\n  LINK: $14.4200, 7d: +14.2%, 14d: +26.5%\n  USDS: $1.0000, 7d: +0.0%, 14d: +0.0%\n  WBTC: $84107.0000, 7d: -0.4%, 14d: +9.6%\n  CBBTC: $84088.0000, 7d: -0.3%, 14d: +9.6%\n  USDE: $0.9998, 7d: -0.0%, 14d: +0.0%\n  USD1: $0.9993, 7d: +0.0%, 14d: +0.0%\n  USDG: $1.0000, 7d: +0.0%, 14d: +0.0%\n  PYUSD: $1.0000, 7d: +0.0%, 14d: +0.1%\n  AAVE: $167.5400, 7d: +17.1%, 14d: +32.9%\n  PUMP: $0.0055, 7d: +41.3%, 14d: +34.0%\n  ENA: $0.2518, 7d: +14.9%, 14d: +65.0%\n  USYC: $1.1400, 7d: +0.1%, 14d: +0.1%\n\nRelevant categories:\n  Decentralized Finance (DeFi): mcap change 24h: +0.4%\n  Real World Assets (RWA): mcap change 24h: -0.8%\n  Decentralized Exchange (DEX): mcap change 24h: +0.6%\n  Meme: mcap change 24h: -1.7%\n  Artificial Intelligence (AI): mcap change 24h: -2.6%\n  Chain Abstraction: mcap change 24h: -2.4%\n  Yield Farming: mcap change 24h: +3.7%\n  RWA Protocol: mcap change 24h: +0.3%\n  Cross-chain Communication: mcap change 24h: +0.1%\n  DePIN: mcap change 24h: -0.6%\n\n## SOCIAL & NEWS SIGNALS\nRecent ecosystem articles:\n  [Solana Foundation] Open USD Is Live on Solana\n    Open USD is live on Solana, letting businesses mint and burn 1:1 for dollars at no cost, with over $1 billion committed to liquidity.\n  [Solana Foundation] Slot Time Reduction Effects\n    Solana is now producing slots with a 250ms target, going down from 400ms. In this article we study the effects of this reduction based on direct on-ch\n  [Solana Foundation] Solana Foundation Appoints Rachel Conlan as Chief Strategy Officer and Jamal Raees as General Manager of Payments\n    The Solana Foundation appointed Rachel Conlan to lead strategy and Jamal Raees to expand global payments adoption.\n  [Solana Foundation] Stocks Go Onchain: What the SEC's Innovation Exemption Means for Solana\n    A five-year SEC order lets tokenized shares with full rights trade on public blockchains without stock-exchange registration; Solana's architecture is\n  [Solana Foundation] Solana Changelog: September 18, 2026\n    Transaction V1 reaches mainnet as Solana targets 250ms slots, lower rent, and program deployments with four times lower fees.\n  [Solana Foundation] How AI Is Reshaping Crypto Security, with Michael Coates\n    A ~$116 million Coldcard exploit shows why crypto security must eliminate single points of failure and automate defenses for AI-speed threats.\n  [Solana Foundation] Breakpoint 2026: A guide to getting oriented (Part 1)\n    Your Solana Events guide to thriving (and surviving) at Breakpoint London 2026\n  [Solana Foundation] Project Harmonia Brings Institutional Tokenized Funds to Solana\n    Project Harmonia connects Allfunds, with about \u20ac1.9 trillion under administration, to tokenized funds on Solana; submissions close October 24, 2026.\n  [Solana Foundation] Solana Summer School 2026: From first program to demo day\n    A look back at Solana Summer School 2026: 1,164 applicants from 69 countries, five weeks of live classes, four weeks of capstone building, and one dem\n  [Solana Foundation] Solana: Building, Proving and Earning Trust in Public\n    Solana has maintained 100% uptime since February 2024, including when a routing failure took nearly 29% of network stake offline.\n  [Helius Blog] Agave 4.3 Update: All You Need to Know\n    A roundup of the most important changes in the Solana Agave 4.3 validator client release, headlined by Alpenglow replacing TowerBFT with Votor.\n  [Helius Blog] Solana Transaction Versioning: Legacy, v0 and v1\n    How Solana's three transaction formats differ on the wire: legacy, v0 with Address Lookup Tables, and v1's 4,096-byte redesign with native resource co\n  [Helius Blog] Introducing the Parsed Events API and Parsed Streams\n    Get fully parsed transactions for over 3,600 Solana programs with the Parsed Events API and Parsed Streams.\n  [Helius Blog] Agave 4.2: The Migration Checklist\n    Learn about Agave 4.2 breaking changes and how to verify your integrations before mainnet feature gates activate.\n  [Helius Blog] What is an LSM Tree? The Log-Structured Merge Tree Explained\n    A complete walkthrough of the LSM tree and its write path\u2014memtable, WAL, and SST files\u2014including how to trace a single write on your own machine\n\nCrypto news mentioning Solana:\n\nGovernance (open SIMDs):\n  Bump markdown-it, markdownlint and markdownlint-cli2 (by dependabot[bot])\n  SIMD-0677: Vote Account Commission History (by umar-bhatty)\n  SIMD-0511: On-Chain Epoch Stakes (by sam0x17)\n  SIMD-0675: Geo-Aware Leader Schedule (by wattenhoferSOL)\n  SIMD-0674: Validator Location Registration (by wattenhoferSOL)",
+    "raw_digest": "## ONCHAIN SIGNALS\nSolana TVL: $5,892,235,199\n  14d change: -9.9%\n  30d change: +3.4%\n\nTop protocols by TVL movement (7d):\n  CEX.IO (CEX): TVL $1,222,167, 7d: -57.0%, 1d: +9.4%\n  Synatra (Yield Aggregator): TVL $2,282,867, 7d: +56.0%, 1d: -38.1%\n  Gate US (CEX): TVL $14,520,470, 7d: +50.6%, 1d: -1.6%\n  Orderly Bridge (Bridge): TVL $24,144,474, 7d: +44.7%, 1d: +1.9%\n  BigONE (CEX): TVL $63,284,692, 7d: +38.5%, 1d: -4.2%\n  Zoomex (CEX): TVL $48,129,791, 7d: +34.0%, 1d: -14.4%\n  Jupiter Lend DEX (Dexs): TVL $32,280,309, 7d: +33.1%, 1d: -0.1%\n  Bonk Staked SOL (Liquid Staking): TVL $7,521,677, 7d: -32.3%, 1d: -26.7%\n  Katana (Options Vault): TVL $1,556,827, 7d: -28.0%, 1d: -23.2%\n  Marinade Select (Staking Pool): TVL $139,238,750, 7d: -27.5%, 1d: -4.4%\n  Poloniex (CEX): TVL $1,210,935,236, 7d: -27.4%, 1d: -4.9%\n  Realms (Governance Incentives): TVL $15,294,890, 7d: -25.5%, 1d: -4.0%\n  StandX Bridge (Canonical Bridge): TVL $19,660,083, 7d: -24.6%, 1d: -19.9%\n  Bitstamp (CEX): TVL $4,445,022,968, 7d: +23.9%, 1d: -6.4%\n  Hotcoin (CEX): TVL $1,641,050, 7d: -20.0%, 1d: -7.0%\n\nTop yield opportunities:\n  orca-dex WECX-USDC: APY 62.5% (30d avg: 1024.4%), TVL $514,813\n  raydium-amm NVDAX-SI: APY 162.0% (30d avg: 638.6%), TVL $557,391\n  raydium-amm SPCX-WSOL: APY 421.8% (30d avg: 573.9%), TVL $627,666\n  raydium-amm WSOL-SPCXX: APY 124.8% (30d avg: 476.7%), TVL $952,798\n  orca-dex SOL-NEAR: APY 145.6% (30d avg: 426.6%), TVL $573,822\n  orca-dex SOL-STONK: APY 142.3% (30d avg: 369.8%), TVL $2,148,842\n  orca-dex NEAR-USDC: APY 425.9% (30d avg: 360.0%), TVL $1,671,775\n  orca-dex SOL-USELESS: APY 30.2% (30d avg: 266.7%), TVL $670,240\n  raydium-amm ZEC-ZCAT: APY 159.8% (30d avg: 255.1%), TVL $1,087,919\n  orca-dex ZEC-USDC: APY 205.7% (30d avg: 231.4%), TVL $2,872,015\n\nNetwork TPS (avg): 5473\n\n## DEVELOPER SIGNALS\nTrending new Solana repos (last 30 days):\n  solana-classic/solana-classic: \u2605375 | Rust | Bring back the fun. Open-source SVM blockchain development focused on art, NFTs, memes and their com\n    topics: agave, blockchain, memecoins, nft, open-source\n  h100envy/gem-search: \u2605212 | Python | Rainbow spider that X-rays memecoins: bundles, linked wallets, dev history. Scanner, Telegram bot, l\n    topics: memecoin, open-source, pumpfun, scanner, solana\n  NuvexNetwork/nuvex-services: \u2605194 | TypeScript | Off-chain services for Nuvex. This repository does not deploy programs and it is not a source of pro\n    topics: ai, api, indexer, infra, off-chai\n  NuvexNetwork/nuvex: \u2605193 | Rust | Solana-native verifiable compute and oracle protocol.  Programs accept a job, an input, constraints,\n    topics: cli, crates, ecvrf, rust, sdk\n  cxmza/windle: \u2605182 | TypeScript | Ship or slash \u2014 onchain promises with collateral on Solana. Teams back promises, markets price them,\n    topics: defi, fastify, monorepo, prediction-markets, react\n  DiracQuantum/dirac_quantum: \u260598 | TypeScript | Post-quantum identity for Solana: passports, seals, encrypted inboxes and quantum playgrounds.\n  h100envy/crawl-hive: \u260593 | TypeScript | A swarm of user-owned crawlers hunting memecoin signal on Solana. Spawn, earn reputation, trade craw\n    topics: crawler, memecoin, nextjs, phantom, solana\n  Janina21/Crypto-Checker: \u260584 | Python | Python-based crypto wallet analysis tool with multi-threaded address and seed phrase checking (up to\n    topics: address-balance-tool, bitcoin-address-balances, bitcoin-checker, brute-force-tool, checker-crypto\n  SpaceDataRig/space-data-rig: \u260570 | TypeScript | Autonomous five-seat AI science rig: reproducible exoplanet transit detection on NASA Exoplanet Arch\n  propavingk/SlotDrift: \u260564 | Python | Slot continuity and fork analysis for captured Solana slot records - gaps, skips, duplicate slots an\n    topics: blockchain, cli, continuity, data-analysis, developer-tools\n\nMost active repos (last 14 days):\n  COEFR/Argos-Memecoin-sniper: \u26051 | pushed: 2026-10-15\n  pumpaifun/paif-fun: \u26050 | pushed: 2026-10-15\n  BadmonLano/flow-cycle: \u26051 | pushed: 2026-10-15\n  fxams/crew: \u26051 | pushed: 2026-10-15\n  mudanzasalegre/memebot3: \u26051 | pushed: 2026-10-15\n  SpaceDataRig/space-data-rig: \u260570 | pushed: 2026-10-15\n  yinscode/pairkey: \u26050 | pushed: 2026-10-15\n  ShinjukuStaition/shinjuku-mcp: \u26052 | pushed: 2026-10-15\n  timitex59/smart-money-solana: \u26050 | pushed: 2026-10-15\n  Jubosaurus/solana-meme-paperbot: \u26052 | pushed: 2026-10-15\n\nEcosystem topic breakdown:\n  defi: 5 repos, 29131 total stars\n  payments: 5 repos, 14381 total stars\n  ai agent: 5 repos, 12253 total stars\n  nft: 5 repos, 8582 total stars\n  mobile: 5 repos, 3868 total stars\n  depin: 5 repos, 1041 total stars\n  gaming: 5 repos, 981 total stars\n  rwa: 5 repos, 580 total stars\n  blink: 5 repos, 162 total stars\n  token-extensions: 5 repos, 92 total stars\n\n## MARKET SIGNALS\nSOL: $101.80\n  24h: -2.9%, 7d: -9.5%, 14d: -13.2%, 30d: +0.8%\n\nTop Solana ecosystem tokens (by market cap):\n  USDT: $0.9991, 7d: -0.0%, 14d: -0.1%\n  USDC: $0.9996, 7d: -0.0%, 14d: -0.0%\n  SOL: $101.7700, 7d: -10.2%, 14d: -13.8%\n  USDS: $0.9999, 7d: +0.1%, 14d: +0.0%\n  WBTC: $80354.0000, 7d: -2.4%, 14d: -4.1%\n  LINK: $11.9700, 7d: -8.2%, 14d: -17.0%\n  CBBTC: $80374.0000, 7d: -2.3%, 14d: -4.0%\n  USDE: $0.9994, 7d: -0.0%, 14d: -0.0%\n  USD1: $0.9993, 7d: +0.1%, 14d: +0.0%\n  USDG: $1.0000, 7d: +0.0%, 14d: -0.0%\n  PYUSD: $0.9998, 7d: +0.1%, 14d: -0.0%\n  ENA: $0.1863, 7d: -14.3%, 14d: -28.5%\n  USYC: $1.1400, 7d: +0.1%, 14d: +0.1%\n  USDY: $1.1500, 7d: +0.1%, 14d: +0.1%\n  AAVE: $148.3700, 7d: -13.5%, 14d: -11.0%\n\nRelevant categories:\n  Decentralized Finance (DeFi): mcap change 24h: -6.5%\n  Real World Assets (RWA): mcap change 24h: -1.2%\n  Decentralized Exchange (DEX): mcap change 24h: -4.5%\n  Meme: mcap change 24h: -4.9%\n  Artificial Intelligence (AI): mcap change 24h: -5.3%\n  Chain Abstraction: mcap change 24h: -6.7%\n  Yield Farming: mcap change 24h: -9.3%\n  RWA Protocol: mcap change 24h: -6.0%\n  Cross-chain Communication: mcap change 24h: -5.8%\n  DePIN: mcap change 24h: -5.8%\n\n## SOCIAL & NEWS SIGNALS\nRecent ecosystem articles:\n  [Solana Foundation] Geo-Aware Leader Schedule\n    This study evaluates SIMD-0675, a geo-aware leader schedule for Solana. It reorders the stake-weighted random schedule so that consecutive leaders are\n  [Solana Foundation] More Breakpoint 2026 Speakers Confirmed for London\n    Twelve more speakers join Breakpoint 2026 at Olympia London, taking the stage from 15\u201317 November across finance, trading and infrastructure.\n  [Solana Foundation] Payments on Solana: September 2026 in Five Stories\n    Payment Channels topped 1 million payments per second in testing as Solana stablecoin supply reached $17.3 billion and x402 share hit 76%.\n  [Solana Foundation] Breakpoint 2026: Booked Breakpoint? Let's Get You Prepped (Part 2)\n    Arrive at Breakpoint London 2026 ready for a 6,000-person event, with travel booked, devices secured, and your week mapped in advance.\n  [Solana Foundation] Solana Changelog: October 8, 2026\n    web3.js v3 is ready for general use, while Solana activates a feature gate to cut slot times from 250ms to 200ms after one epoch.\n  [Solana Foundation] Samsung Partners with Solana to Natively Deliver Stablecoins in Samsung Wallet to 82 Million U.S. Galaxy Devices\n    Beginning the last week of October 2026, Samsung Wallet will support USDC cross-border transfers on Solana across 82 million U.S. Galaxy devices.\n  [Solana Foundation] Solana Ecosystem Roundup: September 2026\n    September saw growth across tokenized stocks, stablecoins, payments, and DeFi. Tokenized equity supply reached $684 million, stablecoins hit $17.51 bi\n  [Solana Foundation] Solana Foundation Launches Solana DvP, an Atomic Settlement Program Built for Financial Institutions\n    Onchain open-source delivery-versus-payment infrastructure, tailored for the world\u2019s leading financial institutions\n  [Solana Foundation] Introducing Solana Microscope: Program Monitoring and Alerts\n    Microscope decodes Solana program and Squads multisig activity into Grafana dashboards and alerts for Slack, Telegram, and PagerDuty.\n  [Solana Foundation] Solana x AI: The Democratization Layer\n    Solana can give AI agents permissionless access to compute, training, identity, memory, and machine-native payments.\n  [Helius Blog] Agave 4.3 Update: All You Need to Know\n    A roundup of the most important changes in the Solana Agave 4.3 validator client release, headlined by Alpenglow replacing TowerBFT with Votor.\n  [Helius Blog] Solana Transaction Versioning: Legacy, v0 and v1\n    How Solana's three transaction formats differ on the wire: legacy, v0 with Address Lookup Tables, and v1's 4,096-byte redesign with native resource co\n  [Helius Blog] Introducing the Parsed Events API and Parsed Streams\n    Get fully parsed transactions for over 3,600 Solana programs with the Parsed Events API and Parsed Streams.\n  [Helius Blog] Agave 4.2: The Migration Checklist\n    Learn about Agave 4.2 breaking changes and how to verify your integrations before mainnet feature gates activate.\n  [Helius Blog] What is an LSM Tree? The Log-Structured Merge Tree Explained\n    A complete walkthrough of the LSM tree and its write path\u2014memtable, WAL, and SST files\u2014including how to trace a single write on your own machine\n\nCrypto news mentioning Solana:\n  [TheBlock] Ledger unveils Atom Android device with Solana Mobile integration and new tamper protections amid investigation into modified wallets\n  [TheBlock] Major shareholder presses SkyAI on Solana sales after treasury shrinks 70% in a month\n\nGovernance (open SIMDs):\n  SIMD-0088 Amendment: Hash validation in Core BPF migrations (by buffalojoec)\n  [SIMD-0565] Specify compute unit costs for the SIMD-0565 secp256r1 syscalls (by samkim-crypto)\n  amend SIMD-0083: Update feature identifier in relax entry constraints proposal (by mixy1-osec)\n  SIMD-0690: Hash validation in v2 program migrations (by febo)\n  SIMD-0686: Single Program Runtime Environment (by buffalojoec)",
     "meta": {
-      "signals_analyzed": 170,
+      "signals_analyzed": 192,
       "data_sources": [
         "DeFiLlama",
         "GitHub",
@@ -20,142 +20,142 @@
   },
   "highlights": {
     "sol_price": {
-      "price_usd": 117.68,
-      "market_cap": 69169580351,
-      "volume_24h": 3468687455,
-      "change_24h": -0.73,
-      "change_7d": 2.8,
-      "change_14d": 16.48,
-      "change_30d": 15.4,
+      "price_usd": 101.8,
+      "market_cap": 59990133087,
+      "volume_24h": 3946900269,
+      "change_24h": -2.89,
+      "change_7d": -9.46,
+      "change_14d": -13.24,
+      "change_30d": 0.82,
       "ath": 293.31,
-      "ath_change_pct": -59.88
+      "ath_change_pct": -65.29
     },
     "tvl": {
-      "current_tvl": 6526438032,
-      "tvl_14d_ago": 5897086928,
-      "tvl_30d_ago": 5660440710,
-      "change_14d_pct": 10.67,
-      "change_30d_pct": 15.3,
+      "current_tvl": 5892235199,
+      "tvl_14d_ago": 6542645905,
+      "tvl_30d_ago": 5699476153,
+      "change_14d_pct": -9.94,
+      "change_30d_pct": 3.38,
       "data_points": [
         {
-          "date": 1788307200,
-          "tvl": 5660440710
-        },
-        {
-          "date": 1788393600,
-          "tvl": 5713721160
-        },
-        {
-          "date": 1788480000,
-          "tvl": 5931954848
-        },
-        {
-          "date": 1788566400,
-          "tvl": 5872163100
-        },
-        {
-          "date": 1788652800,
-          "tvl": 5919218598
-        },
-        {
-          "date": 1788739200,
-          "tvl": 6005628509
-        },
-        {
-          "date": 1788825600,
-          "tvl": 5924355460
-        },
-        {
-          "date": 1788912000,
-          "tvl": 5954407913
-        },
-        {
-          "date": 1788998400,
-          "tvl": 5857028725
-        },
-        {
-          "date": 1789084800,
-          "tvl": 5751305352
-        },
-        {
-          "date": 1789171200,
-          "tvl": 5899893660
-        },
-        {
-          "date": 1789257600,
-          "tvl": 5906902945
-        },
-        {
-          "date": 1789344000,
-          "tvl": 5835724204
-        },
-        {
-          "date": 1789430400,
-          "tvl": 5918621616
-        },
-        {
           "date": 1789516800,
-          "tvl": 5724674379
+          "tvl": 5699476153
         },
         {
           "date": 1789603200,
-          "tvl": 5782045073
+          "tvl": 5756866027
         },
         {
           "date": 1789689600,
-          "tvl": 5897086928
+          "tvl": 5871750319
         },
         {
           "date": 1789776000,
-          "tvl": 6305737774
+          "tvl": 6280272394
         },
         {
           "date": 1789862400,
-          "tvl": 6176292150
+          "tvl": 6150861762
         },
         {
           "date": 1789948800,
-          "tvl": 6205774150
+          "tvl": 6180440509
         },
         {
           "date": 1790035200,
-          "tvl": 6458975519
+          "tvl": 6433710322
         },
         {
           "date": 1790121600,
-          "tvl": 6534431450
+          "tvl": 6502389625
         },
         {
           "date": 1790208000,
-          "tvl": 6393977103
+          "tvl": 6365136928
         },
         {
           "date": 1790294400,
-          "tvl": 6484938513
+          "tvl": 6455922620
         },
         {
           "date": 1790380800,
-          "tvl": 6635644558
+          "tvl": 6606805782
         },
         {
           "date": 1790467200,
-          "tvl": 6624534210
+          "tvl": 6595088609
         },
         {
           "date": 1790553600,
-          "tvl": 6638930539
+          "tvl": 6609100135
         },
         {
           "date": 1790640000,
-          "tvl": 6456361403
+          "tvl": 6427469904
         },
         {
           "date": 1790726400,
-          "tvl": 6569869405
+          "tvl": 6534522735
         },
         {
           "date": 1790812800,
-          "tvl": 6526438032
+          "tvl": 6474779525
+        },
+        {
+          "date": 1790899200,
+          "tvl": 6542645905
+        },
+        {
+          "date": 1790985600,
+          "tvl": 6591102763
+        },
+        {
+          "date": 1791072000,
+          "tvl": 6578980985
+        },
+        {
+          "date": 1791158400,
+          "tvl": 6694678378
+        },
+        {
+          "date": 1791244800,
+          "tvl": 6753085741
+        },
+        {
+          "date": 1791331200,
+          "tvl": 6594912820
+        },
+        {
+          "date": 1791417600,
+          "tvl": 6422329978
+        },
+        {
+          "date": 1791504000,
+          "tvl": 6178718881
+        },
+        {
+          "date": 1791590400,
+          "tvl": 6159558711
+        },
+        {
+          "date": 1791676800,
+          "tvl": 6181106607
+        },
+        {
+          "date": 1791763200,
+          "tvl": 6223125387
+        },
+        {
+          "date": 1791849600,
+          "tvl": 5980034799
+        },
+        {
+          "date": 1791936000,
+          "tvl": 6019026330
+        },
+        {
+          "date": 1792022400,
+          "tvl": 5892235199
         }
       ]
     },
@@ -163,13 +163,13 @@
       {
         "name": "CEX.IO",
         "category": "CEX",
-        "tvl": 2476190,
-        "change_1d": 35.42,
-        "change_7d": 98.8,
+        "tvl": 1222167,
+        "change_1d": 9.45,
+        "change_7d": -57.03,
         "chains": [
           "Ethereum",
-          "Tron",
           "Binance",
+          "Tron",
           "Sui",
           "Solana",
           "Polkadot",
@@ -178,17 +178,28 @@
           "Polygon",
           "Ripple",
           "Litecoin",
-          "Cardano",
-          "Bitcoin"
+          "Bitcoin",
+          "Cardano"
         ],
         "url": "http://cex.io/"
       },
       {
+        "name": "Synatra",
+        "category": "Yield Aggregator",
+        "tvl": 2282867,
+        "change_1d": -38.14,
+        "change_7d": 55.97,
+        "chains": [
+          "Solana"
+        ],
+        "url": "https://synatra.xyz"
+      },
+      {
         "name": "Gate US",
         "category": "CEX",
-        "tvl": 9821587,
-        "change_1d": -0.53,
-        "change_7d": -80.38,
+        "tvl": 14520470,
+        "change_1d": -1.63,
+        "change_7d": 50.61,
         "chains": [
           "Ethereum",
           "Solana",
@@ -200,222 +211,238 @@
           "Base",
           "Litecoin",
           "Sui",
-          "Stellar",
           "Optimism",
-          "Ripple",
+          "Stellar",
           "Doge",
-          "Cardano",
           "Injective",
-          "Algorand",
-          "Stacks",
-          "Aptos",
+          "Cardano",
           "Starknet",
+          "Stacks",
+          "Algorand",
+          "Ripple",
+          "Aptos",
           "Linea",
           "Celo",
-          "Mantle",
           "Plasma",
-          "CORE",
+          "Mantle",
           "Hyperliquid L1",
+          "CORE",
           "Cronos",
           "Scroll",
-          "Bitlayer",
-          "ZetaChain",
-          "Sei",
-          "Metis",
           "ApeChain",
+          "Bitlayer",
+          "Klaytn",
           "Manta",
-          "Klaytn"
+          "Metis",
+          "Sei",
+          "ZetaChain"
         ],
         "url": "https://www.gate.com/en-us"
       },
       {
-        "name": "Kamino Institutional Yield",
-        "category": "Uncollateralized Lending",
-        "tvl": 4599547,
-        "change_1d": 29.45,
-        "change_7d": 78.64,
+        "name": "Orderly Bridge",
+        "category": "Bridge",
+        "tvl": 24144474,
+        "change_1d": 1.87,
+        "change_7d": 44.67,
         "chains": [
-          "Solana"
-        ],
-        "url": "https://kamino.com/earn/institutional"
-      },
-      {
-        "name": "FluxBeam",
-        "category": "Dexs",
-        "tvl": 3473910,
-        "change_1d": 23.65,
-        "change_7d": 77.16,
-        "chains": [
-          "Solana"
-        ],
-        "url": "https://fluxbeam.xyz"
-      },
-      {
-        "name": "PancakeSwap AMM V3",
-        "category": "Dexs",
-        "tvl": 343492367,
-        "change_1d": 0.12,
-        "change_7d": 76.67,
-        "chains": [
-          "Binance",
           "Ethereum",
-          "Base",
-          "Arbitrum",
           "Solana",
-          "Robinhood Chain",
-          "Monad",
-          "zkSync Era",
-          "Linea",
-          "Op_Bnb",
-          "Polygon zkEVM"
+          "Binance",
+          "Berachain",
+          "Arbitrum",
+          "Near",
+          "Optimism",
+          "Avalanche",
+          "X Layer",
+          "Base",
+          "Sei",
+          "Polygon",
+          "Mantle",
+          "Sonic",
+          "Abstract",
+          "ADI",
+          "Story",
+          "Morph",
+          "Mode",
+          "Plume"
         ],
-        "url": "https://pancakeswap.finance/swap"
+        "url": "https://orderly.network"
+      },
+      {
+        "name": "BigONE",
+        "category": "CEX",
+        "tvl": 63284692,
+        "change_1d": -4.17,
+        "change_7d": 38.51,
+        "chains": [
+          "Bitcoin",
+          "Ethereum",
+          "Tron",
+          "Solana"
+        ],
+        "url": "https://big.one"
       }
     ],
     "trending_repos": [
       {
-        "name": "nhovongoc0-max/meme-radar",
-        "description": "Meme\u96f7\u8fbe\u5f00\u6e90\u7248\uff1a\u672c\u5730\u53ea\u8bfb\u3001\u591a\u94fe Meme \u5019\u9009\u626b\u63cf\u4e0e\u4eba\u5de5\u590d\u6838\u5de5\u5177",
-        "stars": 499,
-        "forks": 193,
-        "language": "JavaScript",
-        "created_at": "2026-09-11T12:14:57Z",
-        "updated_at": "2026-10-01T11:20:09Z",
-        "pushed_at": "2026-09-30T15:22:19Z",
-        "url": "https://github.com/nhovongoc0-max/meme-radar",
-        "topics": [
-          "bsc",
-          "crypto",
-          "gmgn",
-          "meme",
-          "security",
-          "solana",
-          "token-scanner"
-        ],
-        "open_issues": 1
-      },
-      {
-        "name": "Kylerkrausemdzyra64/Crypto-Checker",
-        "description": "Python-based crypto wallet analysis tool with multi-threaded address and seed phrase checking (up to 50 threads). Supports Bitcoin, Ethereum, Solana, BNB Chain, Polygon, and EVM networks. Includes pro",
-        "stars": 89,
-        "forks": 25,
-        "language": "Python",
-        "created_at": "2026-09-18T11:21:11Z",
-        "updated_at": "2026-09-25T20:10:26Z",
-        "pushed_at": "2026-09-18T11:35:53Z",
-        "url": "https://github.com/Kylerkrausemdzyra64/Crypto-Checker",
-        "topics": [
-          "address-balance-tool",
-          "btc-scanner",
-          "check-crypto-balance",
-          "checker",
-          "checker-crypto",
-          "crypto-checker-tool",
-          "cryptoanalysis",
-          "cryptochecker",
-          "cryptocompare",
-          "cryptocurrencies",
-          "cryptocurrency-analyisis",
-          "cryptohack",
-          "cryptoresearch",
-          "ethereum-wallet",
-          "finder-bitcoin",
-          "finder-crypto",
-          "wallet-checker-api",
-          "wallet-finder-crypto",
-          "wallet-searcher",
-          "wallet-tracker"
-        ],
-        "open_issues": 0
-      },
-      {
-        "name": "openarbmev/Openarb-Trade-SDK",
-        "description": "Rust SDK for low-latency Solana DEX trading bots",
-        "stars": 86,
-        "forks": 0,
+        "name": "solana-classic/solana-classic",
+        "description": "Bring back the fun. Open-source SVM blockchain development focused on art, NFTs, memes and their communities. Experimental testnet live.",
+        "stars": 375,
+        "forks": 56,
         "language": "Rust",
-        "created_at": "2026-09-10T15:55:21Z",
-        "updated_at": "2026-09-19T11:56:34Z",
-        "pushed_at": "2026-09-10T16:09:09Z",
-        "url": "https://github.com/openarbmev/Openarb-Trade-SDK",
-        "topics": [],
-        "open_issues": 0
+        "created_at": "2026-10-13T19:35:48Z",
+        "updated_at": "2026-10-15T13:09:55Z",
+        "pushed_at": "2026-10-15T13:15:27Z",
+        "url": "https://github.com/solana-classic/solana-classic",
+        "topics": [
+          "agave",
+          "blockchain",
+          "memecoins",
+          "nft",
+          "open-source",
+          "solana",
+          "svm",
+          "testnet"
+        ],
+        "open_issues": 6
       },
       {
-        "name": "propavingk/SlotDrift",
-        "description": "Slot continuity and fork analysis for captured Solana slot records - gaps, skips, duplicate slots and orphaned branches, with an independent Rust engine.",
-        "stars": 64,
-        "forks": 4,
+        "name": "h100envy/gem-search",
+        "description": "Rainbow spider that X-rays memecoins: bundles, linked wallets, dev history. Scanner, Telegram bot, live Bundle Index.",
+        "stars": 212,
+        "forks": 46,
         "language": "Python",
-        "created_at": "2026-09-20T07:14:19Z",
-        "updated_at": "2026-09-29T18:30:07Z",
-        "pushed_at": "2026-09-24T18:11:04Z",
-        "url": "https://github.com/propavingk/SlotDrift",
+        "created_at": "2026-10-05T13:12:12Z",
+        "updated_at": "2026-10-14T20:43:49Z",
+        "pushed_at": "2026-10-09T19:43:14Z",
+        "url": "https://github.com/h100envy/gem-search",
         "topics": [
-          "blockchain",
-          "cli",
-          "continuity",
-          "data-analysis",
-          "developer-tools",
-          "forks",
-          "observability",
-          "python",
-          "replay",
-          "rust",
-          "slots",
-          "solana"
+          "memecoin",
+          "open-source",
+          "pumpfun",
+          "scanner",
+          "solana",
+          "telegram-bot"
         ],
         "open_issues": 2
       },
       {
-        "name": "sopersone/CROWBRAIN",
-        "description": "Experimental market observation terminal for Solana and Robinhood Chain, featuring a crow-inspired interface, rule-based signals, and live engine logs.",
-        "stars": 38,
-        "forks": 10,
-        "language": "Python",
-        "created_at": "2026-09-15T15:21:28Z",
-        "updated_at": "2026-09-30T12:05:20Z",
-        "pushed_at": "2026-09-15T15:23:57Z",
-        "url": "https://github.com/sopersone/CROWBRAIN",
-        "topics": [],
+        "name": "NuvexNetwork/nuvex-services",
+        "description": "Off-chain services for Nuvex. This repository does not deploy programs and it is not a source of protocol truth.",
+        "stars": 194,
+        "forks": 313,
+        "language": "TypeScript",
+        "created_at": "2026-09-30T07:55:06Z",
+        "updated_at": "2026-10-15T11:07:14Z",
+        "pushed_at": "2026-10-03T09:24:00Z",
+        "url": "https://github.com/NuvexNetwork/nuvex-services",
+        "topics": [
+          "ai",
+          "api",
+          "indexer",
+          "infra",
+          "off-chai",
+          "postgresql",
+          "solana"
+        ],
         "open_issues": 0
+      },
+      {
+        "name": "NuvexNetwork/nuvex",
+        "description": "Solana-native verifiable compute and oracle protocol.  Programs accept a job, an input, constraints, and a callback. Randomness is the first job. An active node can fulfill a VRF request with an ECVRF",
+        "stars": 193,
+        "forks": 69,
+        "language": "Rust",
+        "created_at": "2026-10-02T15:38:29Z",
+        "updated_at": "2026-10-15T11:07:54Z",
+        "pushed_at": "2026-10-09T16:25:51Z",
+        "url": "https://github.com/NuvexNetwork/nuvex",
+        "topics": [
+          "cli",
+          "crates",
+          "ecvrf",
+          "rust",
+          "sdk",
+          "solana",
+          "vrf"
+        ],
+        "open_issues": 12
+      },
+      {
+        "name": "cxmza/windle",
+        "description": "Ship or slash \u2014 onchain promises with collateral on Solana. Teams back promises, markets price them, the chain decides.",
+        "stars": 182,
+        "forks": 1,
+        "language": "TypeScript",
+        "created_at": "2026-10-11T21:37:08Z",
+        "updated_at": "2026-10-12T10:55:50Z",
+        "pushed_at": "2026-10-12T19:24:32Z",
+        "url": "https://github.com/cxmza/windle",
+        "topics": [
+          "defi",
+          "fastify",
+          "monorepo",
+          "prediction-markets",
+          "react",
+          "sign-in-with-solana",
+          "solana",
+          "threejs",
+          "typescript",
+          "web3"
+        ],
+        "open_issues": 4
       }
     ],
     "recent_news": [
       {
         "source": "Solana Foundation",
-        "title": "Open USD Is Live on Solana",
-        "url": "https://solana.com/news/open-usd-is-live-on-solana",
-        "published": "Wed, 30 Sep 2026 19:17:00 GMT",
-        "summary": "Open USD is live on Solana, letting businesses mint and burn 1:1 for dollars at no cost, with over $1 billion committed to liquidity."
+        "title": "Geo-Aware Leader Schedule",
+        "url": "https://solana.com/news/geo-aware-leader-schedule",
+        "published": "Wed, 14 Oct 2026 15:05:00 GMT",
+        "summary": "This study evaluates SIMD-0675, a geo-aware leader schedule for Solana. It reorders the stake-weighted random schedule so that consecutive leaders are geographically close, which cuts handoff latency. No validator\u2019s number of leader windows changes. Two parameters are tuned: STAKE_FLOOR (\u03c3), the stake fraction that sets each location\u2019s compatibility radius, and RUN_LENGTH (\u03b3), the size of the contiguous blocks of compatible leaders. They are tested on 6,250 synthetic Monte Carlo networks built o"
       },
       {
         "source": "Solana Foundation",
-        "title": "Slot Time Reduction Effects",
-        "url": "https://solana.com/news/slot-time-reduction-effects",
-        "published": "Mon, 28 Sep 2026 15:00:00 GMT",
-        "summary": "Solana is now producing slots with a 250ms target, going down from 400ms. In this article we study the effects of this reduction based on direct on-chain measures."
+        "title": "More Breakpoint 2026 Speakers Confirmed for London",
+        "url": "https://solana.com/news/breakpoint-2026-london-speakers-2",
+        "published": "Mon, 12 Oct 2026 04:41:00 GMT",
+        "summary": "Twelve more speakers join Breakpoint 2026 at Olympia London, taking the stage from 15\u201317 November across finance, trading and infrastructure."
       },
       {
         "source": "Solana Foundation",
-        "title": "Solana Foundation Appoints Rachel Conlan as Chief Strategy Officer and Jamal Raees as General Manager of Payments",
-        "url": "https://solana.com/news/solana-foundation-appoints-2026",
-        "published": "Thu, 24 Sep 2026 13:20:00 GMT",
-        "summary": "The Solana Foundation appointed Rachel Conlan to lead strategy and Jamal Raees to expand global payments adoption."
+        "title": "Payments on Solana: September 2026 in Five Stories",
+        "url": "https://solana.com/news/payments-on-solana-september-2026-in-five-stories",
+        "published": "Fri, 09 Oct 2026 12:46:00 GMT",
+        "summary": "Payment Channels topped 1 million payments per second in testing as Solana stablecoin supply reached $17.3 billion and x402 share hit 76%."
       },
       {
         "source": "Solana Foundation",
-        "title": "Stocks Go Onchain: What the SEC's Innovation Exemption Means for Solana",
-        "url": "https://solana.com/news/stocks-sec-innovation-exemption",
-        "published": "Wed, 23 Sep 2026 14:06:00 GMT",
-        "summary": "A five-year SEC order lets tokenized shares with full rights trade on public blockchains without stock-exchange registration; Solana's architecture is live."
+        "title": "Breakpoint 2026: Booked Breakpoint? Let's Get You Prepped (Part 2)",
+        "url": "https://solana.com/news/breakpoint-guide-part2",
+        "published": "Thu, 08 Oct 2026 18:18:00 GMT",
+        "summary": "Arrive at Breakpoint London 2026 ready for a 6,000-person event, with travel booked, devices secured, and your week mapped in advance."
       },
       {
         "source": "Solana Foundation",
-        "title": "Solana Changelog: September 18, 2026",
-        "url": "https://solana.com/news/solana-changelog-september-18-2026",
-        "published": "Sat, 19 Sep 2026 11:28:00 GMT",
-        "summary": "Transaction V1 reaches mainnet as Solana targets 250ms slots, lower rent, and program deployments with four times lower fees."
+        "title": "Solana Changelog: October 8, 2026",
+        "url": "https://solana.com/news/solana-changelog-october-8-2026",
+        "published": "Thu, 08 Oct 2026 08:33:00 GMT",
+        "summary": "web3.js v3 is ready for general use, while Solana activates a feature gate to cut slot times from 250ms to 200ms after one epoch."
+      },
+      {
+        "source": "TheBlock",
+        "title": "Ledger unveils Atom Android device with Solana Mobile integration and new tamper protections amid investigation into modified wallets",
+        "url": "https://www.theblock.co/news/business/2026-10-15-ledger-atom-solana-mobile-418644",
+        "published": "Thu, 15 Oct 2026 12:00:00 +0000",
+        "summary": "Ledger unveiled Atom, an Android-based security device with Solana Mobile integration, AI-agent controls, and hardware-tampering protections."
+      },
+      {
+        "source": "TheBlock",
+        "title": "Major shareholder presses SkyAI on Solana sales after treasury shrinks 70% in a month",
+        "url": "https://www.theblock.co/news/business/2026-10-14-solana-treasury-skyai-bastion-sol-sales-tender-offer-418598",
+        "published": "Wed, 14 Oct 2026 18:25:54 +0000",
+        "summary": "SkyAI's SOL treasury fell 70% in under a month, with 400,000 SOL unexplained. Bastion Trading won't tender at $3 a share and wants $3.50."
       }
     ]
   }
